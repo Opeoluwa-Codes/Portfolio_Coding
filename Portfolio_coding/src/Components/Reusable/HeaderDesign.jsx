@@ -24,12 +24,12 @@ const HeaderDesignWrapper = styled.div`
   margin-bottom: 30px;
   box-sizing: border-box;
 
-  border: 1px dashed #7D5A50;
+  border: 1px solid #bb8a52;
 
   h1{
     font-size: 80px;
-    font-weight: 900;
-    color: #7D5A50;
+    font-weight: 500;
+    color: #bb8a52;
 
     margin: 0px;
   }

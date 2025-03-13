@@ -1,101 +1,146 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import {styled} from 'styled-components';
 import Picture from '../Assets/JPG/Picture.jpg'
 
+
+
 const HomePage = () => {
   const name = "OPEOLUWA"
+  const action = "CODES"
   const [displayedName, setDisplayedName] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayedAction, setDisplayedAction] = useState("");
+  const [currentIndexOne, setCurrentIndexOne] = useState(0);
+  const [currentIndexTwo, setCurrentIndexTwo] = useState(0);
 
   useEffect(() =>{
 
     const interval = setInterval(() =>{
 
-      if (currentIndex < name.length){
-        setDisplayedName((prev) => prev + name[currentIndex]);
-        setCurrentIndex((prev) => prev + 1)
+      if (currentIndexOne < name.length){
+        setDisplayedName((prev) => prev + name[currentIndexOne]);
+        setCurrentIndexOne((prev) => prev + 1)
       }else{
         clearInterval(interval);
       }
       
-    }, 500); 
+    }, 100); 
 
     return () => clearInterval(interval);
     
-  }, [currentIndex, name]);
+  }, [currentIndexOne, name]);
+
+  useEffect(() =>{
+
+    const interval = setInterval(() =>{
+
+      if (currentIndexTwo < action.length){
+        setDisplayedAction((prev) => prev + action[currentIndexTwo]);
+        setCurrentIndexTwo((prev) => prev + 1)
+      }else{
+        clearInterval(interval);
+      }
+      
+    }, 1000); 
+
+    return () => clearInterval(interval);
+    
+  }, [currentIndexTwo, action]);
 
   return (
     <HomeWrapper>
 
       <LeftSide>
-        <h2>HI THERE!</h2>
-        <Name>
-          <POne>I'M</POne>
-          <PTwo>{displayedName}</PTwo>
-        </Name>
+        <BusinessName>
+
+          <NOne>
+            {displayedName}
+          </NOne>
+          <NTwo>
+            {displayedAction}
+          </NTwo>
+
+        </BusinessName>
         <RoleDisplay>FrontEnd Developer</RoleDisplay>
         <p>My passion is building scalable, easy-to-use, and efficient solutions using the latest web technologies. I am open to productive collaborations. I am eager to work on exciting projects. Let's create something amazing together!</p>
-        <button>MORE ABOUT ME</button>
+        <Links to='/about'><button>MORE ABOUT ME</button></Links>
       </LeftSide>
       
       <RightSide>
-        <img src={Picture} alt="#" />
+        <FirstBox>
+          
+        </FirstBox>
+
+        <SecondBox>
+
+            <img src={Picture} alt="Opeoluwa" />
+
+        </SecondBox>
+        
       </RightSide>
 
     </HomeWrapper>
+    
   );
 };
 
 export default HomePage;
 
 const HomeWrapper = styled.div`
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   width: 100%;
   min-height: 100vh;
+
+  background-color: #0b1e26;
+
 `
 const LeftSide = styled.div`
-  width: 50%;
-  height: fit-content;
+  width: 70%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 
   box-sizing: border-box;
   padding: 5%;
 
-  h2{
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: #7D5A50;
-  }
+  position: relative;
 
   p{
     font-size: 14px;
     
-    color: #7D5A50;
+    font-weight: 100;
 
-    line-height: 23px;
+    color: white;
 
-    text-align: justify;
+    line-height: 32px;
 
-    margin-bottom: 30px;
+    text-align: left;
 
-    width: 90%;
+    margin-bottom: 50px;
+
+    width: 70%;
+
   }
 
   button{
     height: 40px;
     width: fit-content;
 
-    border-radius: 20px;
-    border: 2px #7D5A50 solid;
+    border: 1px #bb8a52 solid;
 
     background-color: transparent;
-    color: #7D5A50;
+    color: #bb8a52;
 
     font-size: 14px;
     font-weight: 600;
-    font-family: Libre Baskerville;
+    font-family: Roboto;
 
     box-sizing: border-box;
     padding-left: 10px;
@@ -103,67 +148,110 @@ const LeftSide = styled.div`
   }
 
   button:hover{
-    border: transparent;
-
-    background-color: #7D5A50;
-    color: #F5E8C7;
+    border-color: white;
+    color: white;
   }
 `
+
+const BusinessName = styled.div`
+  
+  position: absolute;
+  top: 5%;
+
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+
+  letter-spacing: 5px;
+`
+
+const NOne = styled.div`
+  color: white;
+
+`
+
+const NTwo = styled.div`
+  color: #bb8a52;
+`
+
 const RightSide = styled.div`
-  width: 50%;
+  width: 30%;
   height: 100vh;
-  img{
-    width: 100%;
-    height: inherit;
-  }
+  background-color: #0b1e26;
 
+  position: relative;
+
+  border-left: 1px #bb8a52 solid;
+
+  img{
+    width: 50%;
+    height: 50%;
+  }
 `
+
 const RoleDisplay = styled.div`
   width: fit-content;
   height: 25px;
 
-  font-size: 14px;
-  font-weight: 600;
-  font-family: Libre BaskerVille;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: Cormorant;
 
   letter-spacing: 2px;
 
-  color: #F5E8C7;
-  background-color: #7D5A50;
-
+  color: #bb8a52;
   
   display: flex;
   align-items: center;
 
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
 
-  margin-bottom: 30px;
-`
-const Name = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  width: 100%;
-
-  margin-bottom: 10px;
-`
-const POne = styled.div`
-  font-size: 60px;
-  font-weight: 900;
-  font-family: Libre Baskerville;
-
-  color: #7D5A50;
+  margin-bottom: 20px;
 `
 
-const PTwo = styled.div`
-  font-size: 60px;
-  font-weight: 900;
-  font-family: Libre Baskerville;
 
-  color: #7D5A50;
+const FirstBox = styled.div`
+  
+  width: 250px;
+  height: 300px;
 
-  letter-spacing: 5px;
+  background-color: #0b1e26;
+  
+  border: 1px #bb8a52 solid;
+
+  position: absolute;
+
+  left: -25%;
+  top: 27%;
+
+  position: relative;
+
+`
+
+const SecondBox = styled.div`
+  
+  width: 250px;
+  height: 300px;
+
+  background-color: #0b1e26;
+
+  position: absolute;
+
+  left: -30%;
+  top: 23.5%;
+
+  img{
+  width: inherit;
+  height: inherit;
+  }
+
+
+`
+const Links = styled(Link)`
+  
+  text-decoration: none
 `

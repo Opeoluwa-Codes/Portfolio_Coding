@@ -8,11 +8,15 @@ const ResumeDisplay = (props) => {
         {props.name}
       </SchoolorJob>
       <SchoolorJobTitle>
-        {props.tile}
+        {props.title}
       </SchoolorJobTitle>
       <Description>
         {props.description}
       </Description>
+      <Certification>
+        {props.view}       
+        <a href={props.link} target={props.target} download={props.download}>{props.here}</a>
+      </Certification>
     </ResumeDisplayWrapper>
   );
 };
@@ -20,51 +24,95 @@ const ResumeDisplay = (props) => {
 export default ResumeDisplay;
 
 const ResumeDisplayWrapper = styled.div`
-  width: 300px;
-  height: 200px;
+  width: 290px;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
-  row-gap: 5%;
+  box-sizing: border-box;
+
+
 `
 const SchoolorJob = styled.div`
   height: 30px;
   width: fit-content;
 
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
 
   display: flex;
   align-items: center;
 
   font-size: 14px;
-  font-weight: 400;
-  color: #E5B299;
+  font-weight: 100;
+  font-family: Roboto;
+  color: white;
 
-  text-transform: capitalize;
+  box-sizing: border-box;
+  padding: 5px;
 
-  background-color: #7D5A50;
+  background-color: #bb8a52;
+
 `
 const SchoolorJobTitle = styled.div`
-  height: 40px;
+  height: 30px;
+  width: fit-content;
 
   display: flex;
   align-items: center;
 
-  font-size: 18px;
-  font-weight: 800;
-  color: #7D5A50;
+  font-size: 20px;
+  font-weight: 500;
+  color: #bb8a52;
+  font-family: Cormorant;
+  margin-bottom: 5px;
 
-  text-transform: capitalize;
 `
 const Description = styled.div`
-  height: 106px;
+  height: fit-content;
+  width: fit-content;
 
   font-size: 14px;
-  font-weight: 300;
-  color: #7D5A50;
+  font-weight: 100;
+  color: white;
 
-  text-align: justify;
+  font-family: Roboto;
+
+  line-height: 25px;
+
+  margin-bottom: 5px;
+
+  text-align: left;
 `
+
+const Certification = styled.div`
+  font-size: 14px;
+  font-weight: 300;
+  color: #bb8a52;
+
+  font-family: Roboto;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+
+  box-sizing: border-box;
+
+  a{
+    width: fit-content;
+    height: 100%;
+
+    font-size: 14px;
+    font-weight: 300;
+    color: #bb8a52;
+
+    text-decoration: underline;
+  }
+
+  a:hover{
+  color: white;
+  }
+`
+

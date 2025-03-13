@@ -35,16 +35,18 @@ const ContactIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border: 1px solid #bb8a52;
 `
 const ContactType = styled(Link)`
   width: 60%;
   height: 100px;
 
   text-decoration: none;
-  color: #7D5A50;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: Libre Baskerville;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Roboto;
 
   display: flex;
   justify-content: start;

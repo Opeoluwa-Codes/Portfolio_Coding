@@ -34,22 +34,21 @@ const InfoWrapper = styled.div`
   height: 100%;
 `
 const Title = styled.div`
-  font-size: 18px;
-  font-weight: 400;
-  font-family: Squada One;
-  color: #7D5A50;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Cormorant;
+  color: #bb8a52;
 
   margin-bottom: 8px;
-  
-  text-transform: uppercase;
+
 `
 const Description = styled.div`
-  font-size: 13px;
-  font-weight: 300;
-  font-family: Libre Baskerville;
-  color: #7D5A50;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: Roboto;
+  color: white;
 
   line-height: 20px;
 
-  text-align: justify;
+  text-align: left;
 `

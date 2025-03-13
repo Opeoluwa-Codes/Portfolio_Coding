@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Picture from '../Assets/JPG/Picture.jpg'
 import { RxDotFilled } from "react-icons/rx";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
@@ -8,9 +9,9 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 const SidePanels= () => {
   return (
     <SideIconsWrapper>
-      <PictureDiv>
+      {/* <PictureDiv>
         <img src={Picture} alt="#" />
-      </PictureDiv>
+      </PictureDiv> */}
 
       <NavList>
         <Dots>
@@ -18,31 +19,37 @@ const SidePanels= () => {
           <ThreeVerticalDots/>
         </Dots>
 
-        <p>HOME</p>
+        <Links to='/'><p>HOME</p></Links>
 
         <Dots>
           <ThreeVerticalDots/>
         </Dots>
 
-        <p>ABOUT ME</p>
+        <Links to='/about'><p>ABOUT ME</p></Links>
 
         <Dots>
           <ThreeVerticalDots/>
         </Dots>
 
-        <p>RESUME</p>
+        <Links to='/resume'><p>MY RESUME</p></Links>
 
         <Dots>
           <ThreeVerticalDots/>
         </Dots>
 
-        <p>PORTFOLIO</p>
+        <Links to='/toolstack'><p>MY TOOLSTACK</p></Links>
 
         <Dots>
           <ThreeVerticalDots/>
         </Dots>
 
-        <p>CONTACT</p>
+        <Links to='/portfolio'><p>MY PORTFOLIO</p></Links>
+
+        <Dots>
+          <ThreeVerticalDots/>
+        </Dots>
+
+        <Links to='/contact'><p>CONTACT</p></Links>
 
         <Dots>
           <ThreeVerticalDots/>
@@ -57,7 +64,7 @@ const SidePanels= () => {
 export default SidePanels;
 
 const SideIconsWrapper = styled.div`
-  width: 12%;
+  width: 165px;
   height: 100vh;
 
   position: fixed;
@@ -66,19 +73,24 @@ const SideIconsWrapper = styled.div`
 
   box-sizing: border-box;
 
-  background-color: #7D5A50;
-`
-const PictureDiv = styled.div`
-  width: 100%;
-  height: 28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  margin-bottom: 70px;
-
-  img{
-    width: inherit;
-    height: 100%;
-  }
+  background-color: #0b1e26;
+  border-right: 1px #bb8a52 solid;
 `
+// const PictureDiv = styled.div`
+//   width: 100%;
+//   height: 28%;
+
+//   margin-bottom: 70px;
+
+//   img{
+//     width: inherit;
+//     height: 100%;
+//   }
+// `
 const NavList = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,25 +98,32 @@ const NavList = styled.div`
 
   p{
     font-size: 14px;
-    color: #F5E8C7;
+    font-weight: 600;
+    color: #bb8a52;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   p:hover{
-    color: #E5B299;
+    color: white;
   }
 `
+
+const Links = styled(Link)`
+  
+  text-decoration: none
+`
+
 const Dots = styled.div`
   display: flex;
   flex-direction: column;
 
-  color: #F5E8C7;
+  color: #bb8a52;
 `
 const FilledDot = styled(RxDotFilled)`
-  color: #F5E8C7
+  color: #bb8a52
 `
 const ThreeVerticalDots = styled(PiDotsThreeVerticalBold)`
-  color: #F5E8C7;
+  color: #bb8a52;
 ` 

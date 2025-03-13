@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import BoxDisplay from '../Components/Not_Reusable/BoxDisplay';
 import WhatIDo from "../Components/Reusable/WhatIDo"
@@ -8,13 +9,34 @@ import Responsive from "../Assets/PNG/Responsive.png"
 import Functional from "../Assets/PNG/Functional.png"
 
 const AboutPage = () => {
+  const description = "I am Opeoluwa, FrontEnd Developer"
+  const [displayedDescription, setDisplayedDescription] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() =>{
+
+    const interval = setInterval(() =>{
+
+      if (currentIndex < description.length){
+        setDisplayedDescription((prev) => prev + description[currentIndex]);
+        setCurrentIndex((prev) => prev + 1)
+      }else{
+        clearInterval(interval);
+      }
+      
+    }, 100); 
+
+    return () => clearInterval(interval);
+      
+    }, [currentIndex, description]);
+
   return (
     <AboutWrapper>
       <HeaderDesign title="ABOUT ME"/>
       <TitleAndDescription>
-        <h2>I am <Cut>Opeoluwa,</Cut> FrondEnd Developer</h2>
+        <h2>{displayedDescription}</h2>
         <p>
-        I am a frontEnd developer passionate about scalable, efficient solutions using ReactJS. I am experienced in team collaboration using Git/GitHub. Moreover, I build user-friendly sign-in functionality and connected frontends to backends. Furthermore, I am open to exciting projects and mentorship opportunities!</p>
+        I am a frontend developer passionate about scalable, efficient solutions using ReactJS. I am experienced in team collaboration using Git/GitHub. Moreover, I build user-friendly sign-in functionality and connected frontends to backends. Furthermore, I am open to exciting projects and mentorship opportunities!</p>
       </TitleAndDescription>
       <BoxAndWhat>
         <BoxDisplay/>
@@ -32,19 +54,19 @@ const AboutPage = () => {
 export default AboutPage;
 
 const AboutWrapper = styled.div`
-  width: 87.92%;
   height: 100vh;
-
-  position: fixed;
-  left: 164px;
+  
+  margin-left: 165px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   box-sizing: border-box;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  background-color: #0b1e26;
 `
 
 const TitleAndDescription = styled.div`
@@ -59,7 +81,6 @@ const TitleAndDescription = styled.div`
   margin-bottom: 20px;
 
   box-sizing: border-box;
-  padding-left: 30px;
 
   h2{
     width: fit-content;
@@ -69,8 +90,8 @@ const TitleAndDescription = styled.div`
     gap: 10px;
 
     font-size: 25px;
-    font-weight: 300;
-    color: #7D5A50;
+    font-weight: 600;
+    color: #bb8a52;
 
     margin-bottom: 0px;
     margin-top: 0px;
@@ -81,10 +102,10 @@ const TitleAndDescription = styled.div`
     height: fit-content;
 
     font-size: 14px;
-    font-weight: 300;
-    color: #7D5A50;
+    font-weight: 100;
+    color: white;
     
-    text-align: justify;
+    text-align: left;
 
     line-height: 23px;
 
@@ -93,9 +114,6 @@ const TitleAndDescription = styled.div`
   }
 `
 
-const Cut = styled.div`
-  font-weight: 500;
-`
 
 const BoxAndWhat = styled.div`
   display: flex;
@@ -106,7 +124,7 @@ const BoxAndWhat = styled.div`
   height: 315px;
 
   box-sizing: border-box;
-  padding-left: 30px;
+
 `
 
 const What = styled.div`
@@ -123,9 +141,9 @@ const What = styled.div`
   box-sizing: border-box;
 
   h3{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
-    color: #7D5A50;
+    color: #bb8a52;
     
     margin-top: 0px;
     margin-bottom: 0px;

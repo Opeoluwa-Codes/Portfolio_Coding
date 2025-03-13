@@ -50,7 +50,8 @@ const BoxWrapper = styled.div`
   box-sizing: border-box;
   padding: 20px;
 
-  background-color: #7D5A50;
+  /* background-color: #D7A859; */
+  border: 1px #bb8a52 solid;
 `
 const LeftBox = styled.div`
   width: 50%;
@@ -96,8 +97,8 @@ const InnerX = styled.div`
   align-items: center;
   justify-content: center;
   
-  border-right: 1px dotted #F5E8C7;
-  border-bottom: 1px dotted #F5E8C7;
+  border-right: 1px solid #bb8a52;
+  border-bottom: 1px solid #bb8a52;
 `
 
 const InnerY1 = styled.div`
@@ -119,7 +120,7 @@ const InnerY2 = styled.div`
   align-items: center;
   justify-content: center;
 
-  border-bottom: 1px dotted #F5E8C7;
+  border-bottom: 1px solid #bb8a52;
 `
 
 const InnerZ = styled.div`
@@ -131,25 +132,25 @@ const InnerZ = styled.div`
   align-items: center;
   justify-content: center;
   
-  border-left: 1px dotted #F5E8C7;
+  border-left: 1px solid #bb8a52;
 `
 
 const Stat = styled.div`
   font-size: 50px;
-  font-weight: 500;
-  font-family: Squada One;
+  font-weight: 600;
+  font-family: Cormorant;
 
-  color: #F5E8C7;
+  color: #bb8a52;
 
   margin-bottom: 5px;
 `
 
 const Label = styled.div`
-  font-size: 12px;
-  font-weight: 400;
-  font-family: Libre Baskerville;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: Roboto;
 
-  color: #F5E8C7;
+  color: white;
 
   margin-top: 5px;
   margin-bottom: 8px;

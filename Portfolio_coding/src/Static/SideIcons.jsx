@@ -1,39 +1,40 @@
 import React from 'react'
 import styled from 'styled-components';
-import { IoHome } from "react-icons/io5";
+import { Link } from 'react-router-dom';
+import { IoMdHome } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
-import { BsFillBriefcaseFill } from "react-icons/bs";
-import { TbDualScreen } from "react-icons/tb";
-import { MdConnectWithoutContact } from "react-icons/md";
+import { IoMdBriefcase } from "react-icons/io";
+import { GoFileSubmodule } from "react-icons/go";
+import { GiTalk } from "react-icons/gi";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
-
+import { VscTools } from "react-icons/vsc";
 
 const SideIcons = () => {
   return (
-    <SidePanelWrapper>
-      <Home/>
+    <SideIconWrapper>
+      <Links to='/about'><About/></Links>
       <ThreeVerticalDots/>
-      <About/>
+      <Links to='/resume'><Resume/></Links>
       <ThreeVerticalDots/>
-      <Resume/>
+      <Links to='/toolstack'><ToolStack/></Links>
       <ThreeVerticalDots/>
-      <Portfolio/>
+      <Links to='/portfolio'><Portfolio/></Links>
       <ThreeVerticalDots/>
-      <Contact/>
-    </SidePanelWrapper>
+      <Links to='/contact'><Contact/></Links>
+    </SideIconWrapper>
   );
 };
 
 export default SideIcons;
 
-const SidePanelWrapper = styled.div`
+const SideIconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   position: fixed;
-  top: 28%;
+  top: 32%;
   right: 1.5%;
   z-index: 1000000;
 
@@ -42,54 +43,58 @@ const SidePanelWrapper = styled.div`
   width: 40px;
   height: fit-content;
 
-  background-color: #7D5A50;
+  background-color: transparent;
 
-  border-radius: 20px;
+  border: 1px #bb8a52 solid;
   
   padding-top: 15px;
   padding-bottom: 15px;
   margin-left: 400px;
 `
 
-const Home = styled(IoHome)`
+const ToolStack = styled(VscTools)`
   font-size: 18px;
-  color: #F5E8C7;
+  color: #bb8a52;
   :hover{
-    color: #E5B299;
+    color: white;
   }
 `
 const About = styled(FaRegUser)`
   font-size: 18px;
-  color: #F5E8C7;
+  color: #bb8a52;
   :hover{
-    color: #E5B299;
+    color: white;
   }
 `
-const Resume = styled(BsFillBriefcaseFill)`
+const Resume = styled(IoMdBriefcase)`
   font-size: 18px;
-  color: #F5E8C7;
+  color: #bb8a52;
   :hover{
-    color: #E5B299;
+    color: white;
   }
 `
-const Portfolio = styled(TbDualScreen)`
+const Portfolio = styled(GoFileSubmodule)`
   font-size: 18px;
-  color: #F5E8C7;
+  color: #bb8a52;
   :hover{
-    color: #E5B299;
+    color: white;
   }
 `
 
-const Contact = styled(MdConnectWithoutContact)`
+const Contact = styled(GiTalk)`
   font-size: 18px;
-  color: #F5E8C7;
+  color: #bb8a52;
   :hover{
-    color: #E5B299;
+    color: white;
   }
 `
 const ThreeVerticalDots = styled(PiDotsThreeVerticalBold)`
  font-size: 18px;
- color: #F5E8C7;
+ color: #bb8a52;
  margin-top: 5px;
  margin-bottom: 5px;
+`
+const Links = styled(Link)`
+  
+  text-decoration: none
 `
