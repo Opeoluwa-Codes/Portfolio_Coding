@@ -197,7 +197,7 @@ const Education = styled.div`
   padding-bottom: 10px;
   box-sizing: border-box;
 
-  scrollbar-color: white white;
+  scrollbar-color: black;
 
   @media (max-width: 767px) {
     gap: 1.5%;
@@ -234,7 +234,7 @@ const Experience = styled.div`
   padding-bottom: 10px;
   box-sizing: border-box;
 
-  scrollbar-color: white white;
+  scrollbar-color: black;
 
   @media (max-width: 767px) {
     gap: 1.5%;
