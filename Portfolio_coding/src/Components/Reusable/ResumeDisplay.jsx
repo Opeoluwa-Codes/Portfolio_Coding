@@ -145,9 +145,9 @@ const Certification = styled.div`
 
     text-decoration: underline;
     
-    /* &:hover{
+    &:hover{
       transform: scale(1.05);
-    } */
+    }
 
     @media (max-width: 705px) {
       font-size: 12px;

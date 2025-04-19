@@ -141,8 +141,8 @@ const NavItem = styled.div`
     transition: all 0.8s ease-in-out;
 
     &:hover{
-      color: #cccccc;
-      /* transform: scale(1.2); */
+      color: #c0c0c0a0;
+      transform: scale(1.2);
     }
   }
   

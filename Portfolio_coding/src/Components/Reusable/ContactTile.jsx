@@ -28,8 +28,6 @@ const ContactWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 5%;
-
 `
 const ContactIcon = styled.div`
   width: 30%;
@@ -66,9 +64,9 @@ const ContactInfo = styled.div`
 
   transition: all 1s ease-in-out;
 
-  /* &:hover{
+  &:hover{
     transform: scale(1.05);
-  } */
+  }
 
   @media (max-width: 570px) {
     font-size: 14px;

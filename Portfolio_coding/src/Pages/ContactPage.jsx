@@ -63,16 +63,17 @@ const MainSection = styled.div`
 `
 const Display = styled.div`
   display: flex;
+  flex-direction: column;
 
-  flex-wrap: wrap;
-
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+
+  width: 100%;
+  height: 60vh;
 
   gap: 10%;
 
-  width: 100%;
-  height: 100%;
+  margin-top: 5%;
 
   padding-left: 5%;
 
@@ -88,7 +89,7 @@ const Whatsapp = styled(FaWhatsapp)`
   height: 100%;
 
   &:hover{
-    color: white;
+    color: #c0c0c0a0;
   }
 `
 const Gmail = styled(CgMail)`
@@ -99,7 +100,7 @@ const Gmail = styled(CgMail)`
   height: 100%;
 
   &:hover{
-    color: white;
+    color: #c0c0c0a0;
   }
 `
 const Twitter = styled(FaXTwitter)`
@@ -110,6 +111,6 @@ const Twitter = styled(FaXTwitter)`
   height: 100%;
 
   &:hover{
-    color: white;
+    color: #c0c0c0a0;
   }
 `

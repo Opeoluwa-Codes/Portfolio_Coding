@@ -96,9 +96,9 @@ const BoxWrapper = styled.div`
     }
   }
 
-  /* a:hover{
+  a:hover{
     transform: scale(1.05);
-  } */
+  }
 
 `
 

@@ -231,9 +231,9 @@ const FilterButton = styled.div`
 
     cursor: pointer;
 
-    /* &:hover{
+    &:hover{
       transform: scale(1.05);
-    } */
+    }
 
     @media (max-width: 990px){
       font-size: 12px;
@@ -258,8 +258,8 @@ const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
   }
 
   &:hover{
-    color: white;
-    /* transform: scale(1.2); */
+    color: #c0c0c0a0;
+    transform: scale(1.2);
   }
 `
 
@@ -276,8 +276,8 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
   }
 
   &:hover{
-    color: white;
-    /* transform: scale(1.2); */
+    color: #c0c0c0a0;
+    transform: scale(1.2);
   }
 `
 
@@ -307,10 +307,8 @@ const PortfolioDisplay = styled.div`
   }
 
   @media (max-width: 500px) {
-    grid-template-columns: repeat(1, 1fr);
     padding: 10px;
-    height: 70%;
-    padding-left: 15%;
+    padding-left: 6%;
 
   }
 
