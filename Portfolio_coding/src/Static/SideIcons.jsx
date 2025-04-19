@@ -91,7 +91,7 @@ const ToolStack = styled(VscTools)`
   color: white;
   transition: all 1s ease-in-out;
 
-  color: ${props => props.active ? '#cccccc' : 'white'};
+  color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
     color: #cccccc;
@@ -107,7 +107,7 @@ const About = styled(FaRegUser)`
   color: white;
   transition: all 1s ease-in-out;
 
-  color: ${props => props.active ? '#cccccc' : 'white'};
+  color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
     color: #cccccc;
@@ -122,7 +122,7 @@ const Resume = styled(IoMdBriefcase)`
   color: white;
   transition: all 1s ease-in-out;
 
-  color: ${props => props.active ? '#cccccc' : 'white'};
+  color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
     color: #cccccc;
@@ -138,7 +138,7 @@ const Portfolio = styled(GoFileSubmodule)`
   color: white;
   transition: all 1s ease-in-out;
 
-  color: ${props => props.active ? '#cccccc' : 'white'};
+  color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
     color: #cccccc;
@@ -155,7 +155,7 @@ const Contact = styled(GiTalk)`
   color: white;
   transition: all 1s ease-in-out;
 
-  color: ${props => props.active ? '#cccccc' : 'white'};
+  color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
     color: #cccccc;
