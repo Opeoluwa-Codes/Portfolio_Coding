@@ -36,7 +36,6 @@ const DialogueBox = (props) => {
                         <li>{props.four}</li>
                         <li>{props.five}</li>
                         <li>{props.six}</li>
-                        <li>{props.seven}</li>
                     </ul>
                 </Description>
                 </Box>
@@ -70,10 +69,37 @@ const dialogVariants = {
 
 
 const BoxWrapper = styled.div`
-  max-height: 90vh;
-  width: 85%;
 
-  box-sizing: border-box;
+  min-width: 30%;
+  height: fit-content;
+  flex-shrink: 0px;
+  
+  a{
+    margin-top: 0px;
+
+    width: fit-content;
+    height: 100%;
+
+    font-size: 14px;
+    font-weight: 200;
+    color: #cccccc;
+
+    text-decoration: underline;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    @media (max-width: 705px) {
+      font-size: 12px;
+
+    }
+  }
+
+  a:hover{
+    transform: scale(1.05);
+  }
+
 `
 
 const Description = styled.div`
@@ -84,53 +110,103 @@ const Description = styled.div`
   font-size: 14px;
   font-weight: 200;
 
+  width: 89.5%;
+
+  @media (max-width: 914px) {
+    width: 78%;
+
+  }
+
+  @media (max-width: 615px) {
+    text-align: left;
+  }
+
 `
 
 const Box = styled(motion.div)`
 
   position: absolute;
-  top: 3%;
-  left: 8%;
+  top: 0%;
+  left: 0%;
 
-  background: white;
-  border: 2px #bb8a52 solid;
+  background: black;
 
-  width: 85%;
-  height: 90vh;
+  height: 100vh;
+  width: 100vw;
+
+  padding-left: 20.5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   
   box-sizing: border-box;
 
 
-  .p1{
-    color: #0b1e26;
 
-    font-size: 14px;
+  @media (max-width: 914px) {
+    padding-top: 0%;
+
+  }
+
+
+  .p1{
+    color: white;
+
+    font-size: 20px;
     font-weight: 400;
 
-    margin-left: 100px;
+    font-family: Cormorant;
+
+    width: 89.5%;
+
+    @media (max-width: 914px) {
+        width: 78%;
+
+    }
+
+    @media (max-width: 615px) {
+      text-align: left;
+    }
+
   }
 
   .p2{
-    color: #0b1e26;
+    color: white;
 
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
 
-    margin-left: 100px;
+    font-family: Cormorant;
 
-    margin-bottom: 30px;
+    width: 89.5%;
+
+    margin-bottom: 2%;
+
+    @media (max-width: 914px) {
+        width: 78%;
+    }
+
+    @media (max-width: 615px) {
+      text-align: left;
+    }
+
   }
 
   ul{
 
     li{
-      color: #0b1e26;
+      color: #cccccc;
 
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 200;
 
       margin-bottom: 30px;
-      margin-left: 150px;
+      margin-left: 5%;
+
+      @media (max-width: 914px) {
+        width: 78%;
+        margin-bottom: 5%;
+
+      }
 
     }
   }
@@ -148,14 +224,31 @@ const Close = styled.div`
   box-sizing: border-box;
 
   padding-top: 10px;
-  padding-right: 10px;
 
   margin-bottom: 30px;
+
+  cursor: pointer;
+
+  @media(max-width: 912px) {
+    padding-right: 15px;
+  }
+
+  @media(max-width: 768px) {
+    padding-right: 0px;
+  }
 
 `
 
 const CloseIcon = styled(MdClose)`
-  color: #bb8a52;
+  color: white;
   font-size: 30px;
 
+
+  @media(max-width: 768px) {
+    font-size: 22px;
+  }
+
+  &:hover{
+    color: red;
+  }
 `

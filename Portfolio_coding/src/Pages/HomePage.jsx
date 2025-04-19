@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import {styled} from 'styled-components';
-import Picture from '../Assets/JPG/Picture.jpg'
+import Picture from '../Assets/JPG/Picture.jpeg'
 
 
 
@@ -61,15 +61,16 @@ const HomePage = () => {
           </NTwo>
 
         </BusinessName>
-        <RoleDisplay>FrontEnd Developer</RoleDisplay>
-        <p>My passion is building scalable, easy-to-use, and efficient solutions using the latest web technologies. I am open to productive collaborations. I am eager to work on exciting projects. Let's create something amazing together!</p>
-        <Links to='/about'><button>MORE ABOUT ME</button></Links>
+
+        <Others>
+          <img src={Picture} alt="Opeoluwa" />
+          <RoleDisplay>FrontEnd Developer</RoleDisplay>
+          <p>My passion is developing scalable, efficient solutions using the latest web technologies. I'm eager to collaborate on exciting projects and seek mentorship connections. Let's create something amazing together!</p>
+          <Links to='/about'><button>MORE ABOUT ME</button></Links>
+        </Others>
       </LeftSide>
       
       <RightSide>
-        <FirstBox>
-          
-        </FirstBox>
 
         <SecondBox>
 
@@ -93,9 +94,9 @@ const HomeWrapper = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 
-  background-color: #0b1e26;
+  background-color: black;
 
 `
 const LeftSide = styled.div`
@@ -104,7 +105,6 @@ const LeftSide = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
 
   box-sizing: border-box;
@@ -112,50 +112,135 @@ const LeftSide = styled.div`
 
   position: relative;
 
+  img{
+
+    width: 150px;
+    height: 200px;
+
+    margin-bottom: 15px;
+
+    @media (min-width: 616px) {
+    display: none;
+    }
+
+  }
+
   p{
     font-size: 14px;
     
-    font-weight: 100;
-
-    color: white;
+    font-weight: 200;
+    color: #cccccc;
 
     line-height: 32px;
 
     text-align: left;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     width: 70%;
 
+    @media (max-width: 615px) {
+      text-align: center;
+
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 705px) {
+    font-size: 12px;
+
+    }
+    
   }
 
   button{
-    height: 40px;
     width: fit-content;
 
-    border: 1px #bb8a52 solid;
+    border: 1px white solid;
 
     background-color: transparent;
-    color: #bb8a52;
+    color: white;
 
     font-size: 14px;
     font-weight: 600;
     font-family: Roboto;
 
     box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+
+    transition: all 1s ease-in-out;
+
+    @media (max-width: 705px) {
+      font-size: 12px;
+
+    }
   }
 
   button:hover{
-    border-color: white;
-    color: white;
+    border-color: none;
+    background-color: #cccccc;
+    color: black;
+
+    cursor: pointer;
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 808px) {
+    width: 68%;
+  }
+
+  @media (max-width: 793px) {
+    width: 65%;
+  }
+
+
+  @media (max-width: 746px) {
+    width: 65%;
+  }
+
+  @media (max-width: 733px) {
+    width: 70%;
+  }
+
+  @media (max-width: 695px) {
+    width: 65%;
+  }
+
+  @media (max-width: 670px) {
+    width: 68%;
+  }
+
+  @media (max-width: 610px) {
+    width: 67%;
+  }
+
+  @media (max-width: 615px) {
+    width: 100%;
+
+    padding: 1.7%;
   }
 `
 
-const BusinessName = styled.div`
+const Others = styled.div`
   
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: 615px) {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+`
+
+
+const BusinessName = styled.div`
+  
+  position: fixed;
   top: 5%;
 
   width: fit-content;
@@ -167,29 +252,65 @@ const BusinessName = styled.div`
   font-size: 14px;
 
   letter-spacing: 5px;
+
+  @media (max-width: 785px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 705px) {
+    font-size: 10px;
+  }
 `
 
 const NOne = styled.div`
-  color: white;
+    font-weight: 200;
+    color: #cccccc;
 
 `
 
 const NTwo = styled.div`
-  color: #bb8a52;
+  color: white;
 `
 
 const RightSide = styled.div`
   width: 30%;
   height: 100vh;
-  background-color: #0b1e26;
+  background-color: black;
+
 
   position: relative;
 
-  border-left: 1px #bb8a52 solid;
+  @media (max-width: 808px) {
+    width: 32%;
+  }
 
-  img{
-    width: 50%;
-    height: 50%;
+  @media (max-width: 793px) {
+    width: 35%;
+  }
+
+  @media (max-width: 746px) {
+    width: 35%;
+  }
+
+  @media (max-width: 733px) {
+    width: 30%;
+  }
+
+  @media (max-width: 695px) {
+    width: 35%;
+  }
+
+  @media (max-width: 670px) {
+    width: 32%;
+  }
+
+  @media (max-width: 610px) {
+    width: 33%;
+  }
+
+  @media (max-width: 615px) {
+    width: 0%;
+    border-left: none;
   }
 `
 
@@ -203,55 +324,83 @@ const RoleDisplay = styled.div`
 
   letter-spacing: 2px;
 
-  color: #bb8a52;
+  color: white;
   
   display: flex;
   align-items: center;
 
   box-sizing: border-box;
 
-  margin-bottom: 20px;
+  margin-bottom: 3%;
+
+  @media (max-width: 893px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 796px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 785px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 705px) {
+    font-size: 25px;
+
+  }
+
+  @media (max-width: 615px) {
+    margin-bottom: 5px;
+
+  }
 `
 
-
-const FirstBox = styled.div`
-  
-  width: 250px;
-  height: 300px;
-
-  background-color: #0b1e26;
-  
-  border: 1px #bb8a52 solid;
-
-  position: absolute;
-
-  left: -25%;
-  top: 27%;
-
-  position: relative;
-
-`
 
 const SecondBox = styled.div`
   
-  width: 250px;
-  height: 300px;
+  width: 180px;
+  height: 230px;
 
-  background-color: #0b1e26;
+  background-color: black;
 
   position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translateY(-50%);
 
-  left: -30%;
-  top: 23.5%;
 
   img{
   width: inherit;
   height: inherit;
+
+  transition: all 1.5s ease-in-out;
+
+
+    &:hover{
+      transform: scale(1.5);
+    }
   }
 
+  @media (max-width: 995px) {
+    width: 200px;
+    height: 250px;
+
+  }
+
+  @media (max-width: 894px) {
+    width: 150px;
+    height: 200px;
+
+  }
+
+  @media (max-width: 615px) {
+    display: none;
+  }
 
 `
 const Links = styled(Link)`
   
   text-decoration: none
 `
+

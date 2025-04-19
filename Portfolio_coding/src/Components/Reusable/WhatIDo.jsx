@@ -21,34 +21,54 @@ const WhatIDoWrapper = styled.div`
   height: fit-content;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: start;
+
+  gap: 10px;
+
+  @media (max-width: 618px) {
+    gap: 4px;
+
+  }
 
   img{
-    width: 50px;
+    width: 40px;
+
+    @media (max-width: 594px) {
+      display: none;
+
+    }
   }
 `
 
 const InfoWrapper = styled.div`
-  width: 82%;
+  width: 100%;
   height: 100%;
 `
 const Title = styled.div`
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   font-family: Cormorant;
-  color: #bb8a52;
+  color: white;
 
-  margin-bottom: 8px;
+  @media (max-width: 705px) {
+    font-size: 14px;
+
+  }
 
 `
 const Description = styled.div`
   font-size: 14px;
-  font-weight: 100;
   font-family: Roboto;
-  color: white;
+  font-weight: 200;
+
+  color: #cccccc;
 
   line-height: 20px;
 
   text-align: left;
+
+  @media (max-width: 705px) {
+    font-size: 12px;
+
+  }
 `

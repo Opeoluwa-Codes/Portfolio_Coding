@@ -9,10 +9,10 @@ import Layout from './Hooks/Layout'
 import SideIcons from './Static/SideIcons'
 import ToolStackPage from './Pages/ToolStackPage'
 
-const SideIconsWrapper = () =>{
-  const location = useLocation();
-  return location.pathname === '/' ? <SideIcons/> : null; 
-};
+// const SideIconsWrapper = () =>{
+//   const location = useLocation();
+//   return location.pathname === '/' ? <SideIcons/> : null; 
+// };
 
 const App = () => {
   return (
@@ -35,7 +35,8 @@ const App = () => {
 
         </Routes>
 
-        <SideIconsWrapper/>
+        <SideIcons/>
+        {/* <SideIconsWrapper/> */}
 
       </BrowserRouter>
     </div>    

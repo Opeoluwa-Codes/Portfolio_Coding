@@ -14,7 +14,7 @@ const BoxDisplay = () => {
         <BottomLeftBox>
           <InnerY1>
             <Stat>100%</Stat>
-            <Label>Task Completion Rate</Label>
+            <Label>Task Completion</Label>
           </InnerY1>
         </BottomLeftBox>
       </LeftBox>
@@ -22,13 +22,13 @@ const BoxDisplay = () => {
       <RightBox>
         <TopRightBox>
           <InnerY2>
-            <Stat>5+</Stat>
+            <Stat>1</Stat>
             <Label>Projects Completed</Label>
           </InnerY2>
         </TopRightBox>
         <BottomRightBox>
           <InnerZ>
-            <Stat>1+</Stat>
+            <Stat>1</Stat>
             <Label>Clients Satisfied</Label>
           </InnerZ>
         </BottomRightBox>
@@ -40,18 +40,26 @@ const BoxDisplay = () => {
 export default BoxDisplay;
 
 const BoxWrapper = styled.div`
-  width: 53%;
+  width: 48.5%;
   height: 100%;
   
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  box-sizing: border-box;
-  padding: 20px;
+  border: 1px white solid;
 
-  /* background-color: #D7A859; */
-  border: 1px #bb8a52 solid;
+  @media (max-width: 914px) {
+    width: 43%;
+
+  }
+
+  @media (max-width: 594px) {
+    width: 46%;
+
+  }
+
+
 `
 const LeftBox = styled.div`
   width: 50%;
@@ -96,9 +104,16 @@ const InnerX = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
   
-  border-right: 1px solid #bb8a52;
-  border-bottom: 1px solid #bb8a52;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+
+  padding: 5px;
+  box-sizing: border-box;
+  
+
 `
 
 const InnerY1 = styled.div`
@@ -109,6 +124,12 @@ const InnerY1 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
+
+  padding: 5px;
+  box-sizing: border-box;
+
 `
 
 const InnerY2 = styled.div`
@@ -120,7 +141,13 @@ const InnerY2 = styled.div`
   align-items: center;
   justify-content: center;
 
-  border-bottom: 1px solid #bb8a52;
+  text-align: center;
+
+  padding: 5px;
+  box-sizing: border-box;
+
+  border-bottom: 1px solid white;
+
 `
 
 const InnerZ = styled.div`
@@ -131,27 +158,49 @@ const InnerZ = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
+
+  padding: 5px;
+  box-sizing: border-box;
   
-  border-left: 1px solid #bb8a52;
+  border-left: 1px solid white;
+
+
 `
 
 const Stat = styled.div`
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 600;
   font-family: Cormorant;
 
-  color: #bb8a52;
+  color: white;
 
-  margin-bottom: 5px;
+
+
+  @media (max-width: 914px) {
+    font-size: 40px;
+
+  }
+
+  @media (max-width: 705px) {
+    font-size: 25px;
+
+  }
+
 `
 
 const Label = styled.div`
   font-size: 14px;
-  font-weight: 100;
   font-family: Roboto;
+  font-weight: 200;
 
-  color: white;
+  color: #cccccc;
 
-  margin-top: 5px;
-  margin-bottom: 8px;
+
+
+  @media (max-width: 705px) {
+    font-size: 12px;
+
+  }
 `

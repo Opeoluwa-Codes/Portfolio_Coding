@@ -1,59 +1,89 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import Picture from '../Assets/JPG/Picture.jpg'
+import { Link, useLocation } from 'react-router-dom';
+
 import { RxDotFilled } from "react-icons/rx";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 
 
 const SidePanels= () => {
+
+  const location = useLocation();
+  const {pathname} = location;
+
   return (
     <SideIconsWrapper>
       {/* <PictureDiv>
         <img src={Picture} alt="#" />
       </PictureDiv> */}
 
+
       <NavList>
+        
         <Dots>
-          <FilledDot/>
-          <ThreeVerticalDots/>
+          <FilledDot />
+          <ThreeVerticalDots />
         </Dots>
-
-        <Links to='/'><p>HOME</p></Links>
-
+        
+        <NavItem active={pathname === '/'}>
+          <Links to='/'>
+            <p>HOME</p>
+          </Links>
+        </NavItem>
+        
         <Dots>
-          <ThreeVerticalDots/>
+          <ThreeVerticalDots />
         </Dots>
-
-        <Links to='/about'><p>ABOUT ME</p></Links>
-
+        
+        <NavItem active={pathname === '/about'}>
+          <Links to='/about'>
+            <p>ABOUT ME</p>
+          </Links>
+        </NavItem>
+        
         <Dots>
-          <ThreeVerticalDots/>
+          <ThreeVerticalDots />
         </Dots>
-
-        <Links to='/resume'><p>MY RESUME</p></Links>
-
+        
+        <NavItem active={pathname === '/resume'}>
+          <Links to='/resume'>
+            <p>MY RESUME</p>
+          </Links>
+        </NavItem>
+        
         <Dots>
-          <ThreeVerticalDots/>
+          <ThreeVerticalDots />
         </Dots>
-
-        <Links to='/toolstack'><p>MY TOOLSTACK</p></Links>
-
+        
+        <NavItem active={pathname === '/toolstack'}>
+          <Links to='/toolstack'>
+            <p>MY TOOLSTACK</p>
+          </Links>
+        </NavItem>
+        
         <Dots>
-          <ThreeVerticalDots/>
+          <ThreeVerticalDots />
         </Dots>
-
-        <Links to='/portfolio'><p>MY PORTFOLIO</p></Links>
-
+        
+        <NavItem active={pathname === '/portfolio'}>
+          <Links to='/portfolio'>
+            <p>MY PORTFOLIO</p>
+          </Links>
+        </NavItem>
+        
         <Dots>
-          <ThreeVerticalDots/>
+          <ThreeVerticalDots />
         </Dots>
-
-        <Links to='/contact'><p>CONTACT</p></Links>
-
+        
+        <NavItem active={pathname === '/contact'}>
+          <Links to='/contact'>
+            <p>CONTACT</p>
+          </Links>
+        </NavItem>
+        
         <Dots>
-          <ThreeVerticalDots/>
-          <FilledDot/>
+          <ThreeVerticalDots />
+          <FilledDot />
         </Dots>
 
       </NavList>
@@ -64,7 +94,7 @@ const SidePanels= () => {
 export default SidePanels;
 
 const SideIconsWrapper = styled.div`
-  width: 165px;
+  width: 11.8%;
   height: 100vh;
 
   position: fixed;
@@ -77,53 +107,61 @@ const SideIconsWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: #0b1e26;
-  border-right: 1px #bb8a52 solid;
+  background-color: black;
+  border-right: 1px white solid;
+
+  padding: 2px;
+  box-sizing: border-box;
+
+  @media (max-width: 914px) {
+    display: none;
+
+  }
+
 `
-// const PictureDiv = styled.div`
-//   width: 100%;
-//   height: 28%;
 
-//   margin-bottom: 70px;
-
-//   img{
-//     width: inherit;
-//     height: 100%;
-//   }
-// `
 const NavList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  p{
+`
+
+const NavItem = styled.div`
+  p {
     font-size: 14px;
     font-weight: 600;
-    color: #bb8a52;
+
+    color: ${props => props.active ? '#cccccc' : 'white'};
 
     margin-top: 20px;
     margin-bottom: 20px;
-  }
+    
+    transition: all 0.8s ease-in-out;
 
-  p:hover{
-    color: white;
+    &:hover{
+      color: #cccccc;
+      transform: scale(1.2);
+    }
   }
-`
+  
+`;
 
 const Links = styled(Link)`
   
   text-decoration: none
+  
 `
 
 const Dots = styled.div`
   display: flex;
   flex-direction: column;
 
-  color: #bb8a52;
+  color: white;
 `
 const FilledDot = styled(RxDotFilled)`
-  color: #bb8a52
+  color: white
 `
 const ThreeVerticalDots = styled(PiDotsThreeVerticalBold)`
-  color: #bb8a52;
+  color: white;
 ` 

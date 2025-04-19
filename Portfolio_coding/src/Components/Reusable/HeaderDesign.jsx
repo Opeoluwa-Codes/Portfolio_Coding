@@ -14,23 +14,56 @@ const HeaderDesign = (props) => {
 export default HeaderDesign;
 
 const HeaderDesignWrapper = styled.div`
-  width: 970px;
+  width: 89.5%;
   height: fit-content;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   box-sizing: border-box;
 
-  border: 1px solid #bb8a52;
+  border: 1px solid white;
+
+  @media (max-width: 914px) {
+    width: 78%;
+
+  }
+
+  @media (max-width: 615px) {
+    width: 80%;
+
+  }
+
+  @media (max-width: 594px) {
+    margin-bottom: 15px;
+
+  }
+
+
+  
 
   h1{
     font-size: 80px;
-    font-weight: 500;
-    color: #bb8a52;
+    font-weight: 800;
+    color: white;
 
     margin: 0px;
+
+    @media (max-width: 914px) {
+    font-size: 70px;
+
+    }
+
+    @media (max-width: 809px) {
+    font-size: 60px;
+
+    }
+
+    @media (max-width: 705px) {
+    font-size: 35px;
+
+    }
   }
 `

@@ -35,15 +35,14 @@ const AboutPage = () => {
       <HeaderDesign title="ABOUT ME"/>
       <TitleAndDescription>
         <h2>{displayedDescription}</h2>
-        <p>
-        I am a frontend developer passionate about scalable, efficient solutions using ReactJS. I am experienced in team collaboration using Git/GitHub. Moreover, I build user-friendly sign-in functionality and connected frontends to backends. Furthermore, I am open to exciting projects and mentorship opportunities!</p>
+        <p>I create engaging websites with ReactJS that work well on all devices. I build user-friendly interfaces with smooth interactions and secure login systems. I connect frontends to backends and use Git/GitHub for team projects. I'm seeking new opportunities and mentorship connections!</p>
       </TitleAndDescription>
       <BoxAndWhat>
         <BoxDisplay/>
         <What>
           <h3>What I Do!</h3>
-          <WhatIDo image={Interactive} title="Interactive UI" description="Crafting dynamic and user-friendly interfaces using ReactJS, HTML, and CSS, ensuring seamless interactivity and engaging user experiences."/>
-          <WhatIDo image={Responsive} title="Responsive UI" description="Designing adaptable and visually appealing layouts and guaranteeing optimal performance across devices and screen sizes."/>
+          <WhatIDo image={Interactive} title="Interactive UI" description="Crafting dynamic and user-friendly interfaces and ensuring seamless interactivity."/>
+          <WhatIDo image={Responsive} title="Responsive UI" description="Designing adaptable and visually appealing layouts and guaranteeing optimal performance."/>
           <WhatIDo image={Functional} title="Functional Websites" description="Building robust web solutions and managing authentication efficiently."/>
         </What>
       </BoxAndWhat>
@@ -55,46 +54,74 @@ export default AboutPage;
 
 const AboutWrapper = styled.div`
   height: 100vh;
-  
-  margin-left: 165px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   box-sizing: border-box;
-  padding-top: 2%;
-  padding-bottom: 2%;
 
-  background-color: #0b1e26;
+  padding-top: 3%;
+  padding-left: 12%;
+
+  background-color: black;
+
+
+  @media (max-width: 914px) {
+    padding-left: 0%;
+
+    align-items: center;
+
+  }
 `
 
 const TitleAndDescription = styled.div`
-  width: 970px;
   height: fit-content;
+  width: 89.5%;
 
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 15px;
 
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 
   box-sizing: border-box;
 
+  @media (max-width: 914px) {
+    width: 78%;
+
+  }
+
+  @media (max-width: 615px) {
+    width: 80%;
+
+  }
+
+
   h2{
-    width: fit-content;
+    width: 100%;
     height: fit-content;
 
-    display: flex;
     gap: 10px;
 
     font-size: 25px;
     font-weight: 600;
-    color: #bb8a52;
+    color: white;
 
     margin-bottom: 0px;
     margin-top: 0px;
+
+    @media (max-width: 615px) {
+    text-align: center;
+
+    }
+
+    @media (max-width: 705px) {
+    font-size: 18px;
+
+    }
+
   }
 
   p{
@@ -102,8 +129,8 @@ const TitleAndDescription = styled.div`
     height: fit-content;
 
     font-size: 14px;
-    font-weight: 100;
-    color: white;
+    font-weight: 200;
+    color: #cccccc;
     
     text-align: left;
 
@@ -111,6 +138,17 @@ const TitleAndDescription = styled.div`
 
     margin-top: 0px;
     margin-bottom: 0px;
+
+    @media (max-width: 615px) {
+    text-align: center;
+
+    }
+
+    @media (max-width: 705px) {
+    font-size: 12px;
+
+    }
+
   }
 `
 
@@ -120,10 +158,28 @@ const BoxAndWhat = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 970px;
-  height: 315px;
+  width: 89.5%;
+  height: 55%;
 
   box-sizing: border-box;
+
+
+  @media (max-width: 914px) {
+    width: 78%;
+
+  }
+
+  @media (max-width: 615px) {
+    width: 80%;
+
+  }
+
+  @media (max-width: 594px) {
+    height: 60%;
+
+  }
+  
+  
 
 `
 
@@ -133,20 +189,37 @@ const What = styled.div`
   align-items: start;
   justify-content: center;
 
-  gap: 10px;
+  gap: 25px;
 
-  width:44%;
-  height: 100%;
+  width: 48.5%;
 
   box-sizing: border-box;
+
+  @media (max-width: 914px) {
+    width: 55%;
+
+  }
+
+  @media (max-width: 594px) {
+    gap: 10px;
+
+    width: 51%;
+
+  }
+
 
   h3{
     font-size: 20px;
     font-weight: 500;
-    color: #bb8a52;
+    color: white;
     
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
+
+    @media (max-width: 705px) {
+    font-size: 18px;
+
+    }
 
   }
 `

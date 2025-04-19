@@ -1,61 +1,26 @@
 import React from 'react'
 import HeaderDesign from '../Components/Reusable/HeaderDesign'
-import styled from 'styled-components';
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaFigma } from "react-icons/fa";
+import styled, { keyframes, css } from 'styled-components';
+
 import { VscVscode } from "react-icons/vsc";
-import { GrHtml5 } from "react-icons/gr";
-import { RiCss3Line } from "react-icons/ri";
-import { SiStyledcomponents } from "react-icons/si";
-import { RiReactjsFill } from "react-icons/ri";
+import { FaFigma } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
-import { SiPostman } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { RiReactjsFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
 
 const ToolStackPage = () => {
   return (
     <ToolStackWrapper>
-        <HeaderDesign title='MY TOOLSTACK'/>
+        <HeaderDesign title="MY TOOLSTACK" />
+
         <Tools>
-            <Ht>
-                <Html/>
-            </Ht>
-
-            <Sc>
-                <Styled/>
-            </Sc>
-
-            <Vc>
-                <Vscode/>
-            </Vc>
-
-            <Vr>
-                <Vercel/>
-            </Vr>
-
-            <Cs>
-                <Css/>
-            </Cs>
-
-            <Gi>
-                <Git/>
-            </Gi>
-
-            <Fi>
-                <Figma/>  
-            </Fi>
-
-            <Po>
-                <Postman/>
-            </Po>
-
-            <Ja>
-                <Js/>
-            </Ja>
-
-            <Gh>
-                <GitHub/>
-            </Gh>
+            <IconWrapper delay="0s"><Vscode /></IconWrapper>
+            <IconWrapper delay="5s"><Figma /></IconWrapper>
+            <IconWrapper delay="10s"><Vercel /></IconWrapper>
+            <IconWrapper delay="15s"><ReactJS /></IconWrapper>
+            <IconWrapper delay="20s"><TypeScript /></IconWrapper>
+            <IconWrapper delay="25s"><GitHub /></IconWrapper>
         </Tools>
     </ToolStackWrapper>
   );
@@ -63,346 +28,163 @@ const ToolStackPage = () => {
 
 export default ToolStackPage;
 
+// Create two separate animations
+const orbitAnimationLarge = keyframes`
+  0% {
+    transform: rotateY(0deg) translateZ(350px);
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  25% {
+    transform: rotateY(90deg) translateZ(350px);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(180deg) translateZ(350px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateY(270deg) translateZ(350px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(350px);
+    opacity: 1
+  }
+`;
 
+const orbitAnimationSmall = keyframes`
+  0% {
+    transform: rotateY(0deg) translateZ(180px);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    transform: rotateY(90deg) translateZ(180px);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(180deg) translateZ(180px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateY(270deg) translateZ(180px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(180px);
+    opacity: 1;
+  }
+`;
+
+const orbitAnimationSmaller = keyframes`
+  0% {
+    transform: rotateY(0deg) translateZ(120px);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    transform: rotateY(90deg) translateZ(120px);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(180deg) translateZ(120px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateY(270deg) translateZ(120px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(120px);
+    opacity: 1;
+  }
+`;
+
+const iconStyle = `
+  color: white;
+  font-size: 60px;
+
+  @media (max-width: 914px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 499px) {
+    font-size: 40px;
+  }
+`;
+
+const Vscode = styled(VscVscode)`${iconStyle}`;
+
+const Figma = styled(FaFigma)`${iconStyle}`;
+
+const Vercel = styled(IoLogoVercel)`${iconStyle}`;
+
+const TypeScript = styled(SiTypescript)`${iconStyle}`;
+
+const ReactJS = styled(RiReactjsFill)`${iconStyle}`;
+
+const GitHub = styled(FaGithub)`${iconStyle}`;
 
 const ToolStackWrapper = styled.div`
-
-    background-color: #0b1e26;
-
-    margin-left: 165px;
-    
     height: 100vh;
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
- 
-    box-sizing: border-box;
-    padding-top: 2%;
-    padding-bottom: 2%;
-
-    @keyframes vscode{
-        0%   {left:460px; top:5%;}
-        10%   {left:690px; top:15%;}
-        20%   {left:920px; top:35%;}
-        30%   {left:920px; top:55%;}
-        40%   {left:690px; top:75%;}
-        50%   {left:460px; top:85%;}
-        60%   {left:230px; top:75%;}
-        70%   {left:0px; top:55%;}
-        80%   {left:0px; top:35%;}
-        90%   {left:230px; top:15%;}
-        100% {left:460px; top:5%;}
-    }
-
-    @keyframes vercel{
-        0%   {left:690px; top:15%;}
-        10%   {left:920px; top:35%;}
-        20%   {left:920px; top:55%;}
-        30%   {left:690px; top:75%;}
-        40%   {left:460px; top:85%;}
-        50%   {left:230px; top:75%;}
-        60%   {left:0px; top:55%;}
-        70%   {left:0px; top:35%;}
-        80%   {left:230px; top:15%;}
-        90% {left:460px; top:5%;}
-        100%   {left:690px; top:15%;}
-    }
-
-    @keyframes css{
-        0%   {left:920px; top:35%;}
-        10%   {left:920px; top:55%;}
-        20%   {left:690px; top:75%;}
-        30%   {left:460px; top:85%;}
-        40%   {left:230px; top:75%;}
-        50%   {left:0px; top:55%;}
-        60%   {left:0px; top:35%;}
-        70%   {left:230px; top:15%;}
-        80% {left:460px; top:5%;}
-        90%   {left:690px; top:15%;}
-        100%   {left:920px; top:35%;}
-    }
-
-    @keyframes github{
-        0%   {left:920px; top:55%;}
-        10%   {left:690px; top:75%;}
-        20%   {left:460px; top:85%;}
-        30%   {left:230px; top:75%;}
-        40%   {left:0px; top:55%;}
-        50%   {left:0px; top:35%;}
-        60%   {left:230px; top:15%;}
-        70% {left:460px; top:5%;}
-        80%   {left:690px; top:15%;}
-        90%   {left:920px; top:35%;}
-        100%   {left:920px; top:55%;}
-    }
-
-    @keyframes javascript{
-        0%   {left:690px; top:75%;}
-        10%   {left:460px; top:85%;}
-        20%   {left:230px; top:75%;}
-        30%   {left:0px; top:55%;}
-        40%   {left:0px; top:35%;}
-        50%   {left:230px; top:15%;}
-        60% {left:460px; top:5%;}
-        70%   {left:690px; top:15%;}
-        80%   {left:920px; top:35%;}
-        90%   {left:920px; top:55%;}
-        100%   {left:690px; top:75%;}
-    }
-
-    @keyframes postman{
-        0%   {left:460px; top:85%;}
-        10%   {left:230px; top:75%;}
-        20%   {left:0px; top:55%;}
-        30%   {left:0px; top:35%;}
-        40%   {left:230px; top:15%;}
-        50% {left:460px; top:5%;}
-        60%   {left:690px; top:15%;}
-        70%   {left:920px; top:35%;}
-        80%   {left:920px; top:55%;}
-        90%   {left:690px; top:75%;}
-        100%   {left:460px; top:85%;}
-    }
-
-    @keyframes figma{
-        0%   {left:230px; top:75%;}
-        10%   {left:0px; top:55%;}
-        20%   {left:0px; top:35%;}
-        30%   {left:230px; top:15%;}
-        40% {left:460px; top:5%;}
-        50%   {left:690px; top:15%;}
-        60%   {left:920px; top:35%;}
-        70%   {left:920px; top:55%;}
-        80%   {left:690px; top:75%;}
-        90%   {left:460px; top:85%;}
-        100%   {left:230px; top:75%;}
-    }
-
-    @keyframes git{
-        0%   {left:0px; top:55%;}
-        10%   {left:0px; top:35%;}
-        20%   {left:230px; top:15%;}
-        30% {left:460px; top:5%;}
-        40%   {left:690px; top:15%;}
-        50%   {left:920px; top:35%;}
-        60%   {left:920px; top:55%;}
-        70%   {left:690px; top:75%;}
-        80%   {left:460px; top:85%;}
-        90%   {left:230px; top:75%;}
-        100%   {left:0px; top:55%;}
-    }
-
-    @keyframes html{
-        0%   {left:0px; top:35%;}
-        10%   {left:230px; top:15%;}
-        20% {left:460px; top:5%;}
-        30%   {left:690px; top:15%;}
-        40%   {left:920px; top:35%;}
-        50%   {left:920px; top: 55%;}
-        60%   {left:690px; top:75%;}
-        70%   {left:460px; top:85%;}
-        80%   {left:230px; top:75%;}
-        90%   {left:0px; top:55%;}
-        100%   {left:0px; top:35%;}
-    }
-
-    @keyframes styledcomponent{
-        0%   {left:230px; top:15%;}
-        10% {left:460px; top:5%;}
-        20%   {left:690px; top:15%;}
-        30%   {left:920px; top:35%;}
-        40%   {left:920px; top: 55%;}
-        50%   {left:690px; top:75%;}
-        60%   {left:460px; top:85%;}
-        70%   {left:230px; top:75%;}
-        80%   {left:0px; top:55%;}
-        90%   {left:0px; top:35%;}
-        100%   {left:230px; top:15%;}
-    }
-
-`
-
-const Tools = styled.div`
-    width: 970px;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
 
-    gap: 100px;
-
-    margin-top: 1%;
-    margin-bottom: 1%;
-
     box-sizing: border-box;
+
+    padding-top: 3%;
+    padding-left: 12%;
 
     position: relative;
-    
-`
 
-const Postman = styled(SiPostman)`
-    color: #bb8a52;
-    font-size: 50px
+    background-color: black;
 
-`
+    @media (max-width: 914px) {
+        padding-left: 0%;
+        align-items: center;
+    }
+`;
 
-const Vercel = styled(IoLogoVercel)`
-    color: #bb8a52;
-    font-size: 50px
-`
+const Tools = styled.div`
+  width: 85%;
+  height: 400px;
 
-const Js = styled(RiReactjsFill)`
-    color: #bb8a52;
-    font-size: 50px
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-const Styled = styled(SiStyledcomponents)`
-    color: #bb8a52;
-    font-size: 50px
-`
+  perspective: 1000px;
 
-const Css = styled(RiCss3Line)`
-    color: #bb8a52;
-    font-size: 50px
-`
+  @media (max-width: 914px) {
+    perspective: 500px;
+    height: 300px;
+    margin-top: 10%;
+  }
+`;
 
-const Html = styled(GrHtml5)`
-    color: #bb8a52;
-    font-size: 50px
-`
+const IconWrapper = styled.div`
+  position: absolute;
+  animation: ${orbitAnimationLarge} 30s linear infinite;
+  animation-delay: ${(props) => props.delay};
+  transform-style: preserve-3d;
+  opacity: 0;
 
-const Vscode = styled(VscVscode)`
-    color: #bb8a52;
-    font-size: 50px
-`
+  @media (max-width: 914px) {
+    animation: ${orbitAnimationSmall} 30s linear infinite;
+    animation-delay: ${(props) => props.delay};
+  }
 
-const Figma = styled(FaFigma)`
-    color: #bb8a52;
-    font-size: 50px
-`
-
-const Git = styled(FaGitAlt)`
-    color: #bb8a52;
-    font-size: 50px
-`
-
-const GitHub = styled(FaGithub)`
-    color: #bb8a52;
-    font-size: 50px
-`
-
-const Ht = styled.div`
-    position: absolute;
-    top: 35%;
-    left: 0px;
-
-    animation-name: html;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-
-`
-
-const Sc = styled.div`
-    position: absolute;
-    top: 15%;
-    left: 230px;
-
-    animation-name: styledcomponent;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Vc = styled.div`
-    position: absolute;
-    top: 5%;
-    left: 460px;
-
-    animation-name: vscode;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Vr = styled.div`
-    position: absolute;
-    top: 15%;
-    left: 690px;
-
-    animation-name: vercel;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Cs = styled.div`
-    position: absolute;
-    top: 35%;
-    left: 920px;
-
-    animation-name: css;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Gi = styled.div`
-    position: absolute;
-    bottom: 35%;
-    left: 0px;
-
-    animation-name: git;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Fi = styled.div`
-    position: absolute;
-    bottom: 15%;
-    left: 230px;
-
-    animation-name: figma;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Po = styled.div`
-    position: absolute;
-    bottom: 5%;
-    left: 460px;
-
-    animation-name: postman;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Ja = styled.div`
-    position: absolute;
-    bottom: 15%;
-    left: 690px;
-
-    animation-name: javascript;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-const Gh = styled.div`
-    position: absolute;
-    bottom: 35%;
-    left: 920px;
-
-    animation-name: github;
-    animation-duration: 50s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-`
-
-
+  @media (max-width: 499px) {
+    animation: ${orbitAnimationSmaller} 30s linear infinite;
+    animation-delay: ${(props) => props.delay};
+  }
+`;

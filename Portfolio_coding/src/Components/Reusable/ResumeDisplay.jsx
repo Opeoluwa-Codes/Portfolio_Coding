@@ -24,95 +24,140 @@ const ResumeDisplay = (props) => {
 export default ResumeDisplay;
 
 const ResumeDisplayWrapper = styled.div`
-  width: 290px;
+
+  min-width: 30%;
   height: fit-content;
+  flex-shrink: 0px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  box-sizing: border-box;
+  /* border: 1px red solid; */
 
+  @media (max-width: 767px) {
+    min-width: 32%;
+
+  }
+
+  @media (max-width: 499px) {
+    min-width: 48.5%;
+
+  }
 
 `
 const SchoolorJob = styled.div`
-  height: 30px;
-  width: fit-content;
 
-  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 300;
+  color: #cccccc;
 
-  display: flex;
-  align-items: center;
+  margin-bottom: 5px;
 
-  font-size: 14px;
-  font-weight: 100;
-  font-family: Roboto;
-  color: white;
+  @media (max-width: 705px) {
+    font-size: 14px;
 
-  box-sizing: border-box;
-  padding: 5px;
+  }
 
-  background-color: #bb8a52;
+  @media (max-width: 632px) {
+    font-size: 12px;
+
+  }
 
 `
 const SchoolorJobTitle = styled.div`
-  height: 30px;
-  width: fit-content;
 
-  display: flex;
-  align-items: center;
-
-  font-size: 20px;
-  font-weight: 500;
-  color: #bb8a52;
-  font-family: Cormorant;
-  margin-bottom: 5px;
-
-`
-const Description = styled.div`
-  height: fit-content;
-  width: fit-content;
-
-  font-size: 14px;
-  font-weight: 100;
+  font-size: 16px;
+  font-weight: 400;
   color: white;
 
   font-family: Roboto;
 
-  line-height: 25px;
+  margin-bottom: 10px;
 
-  margin-bottom: 5px;
+  @media (max-width: 705px) {
+    font-size: 14px;
 
-  text-align: left;
+  }
+
+  @media (max-width: 632px) {
+    font-size: 12px;
+
+  }
+
+`
+const Description = styled.div`
+
+  font-size: 14px;
+  font-weight: 200;
+  color: #cccccc;
+
+  font-family: Roboto;
+
+  margin-bottom: 10px;
+
+  @media (max-width: 705px) {
+    font-size: 12px;
+
+  }
+
+  @media (max-width: 632px) {
+    font-weight: 100;
+
+  }
+
 `
 
 const Certification = styled.div`
   font-size: 14px;
-  font-weight: 300;
-  color: #bb8a52;
+  font-weight: 200;
+  color: #cccccc;
 
   font-family: Roboto;
 
   display: flex;
   align-items: center;
-  gap: 4px;
+
+  gap: 5px;
 
 
-  box-sizing: border-box;
+  @media (max-width: 705px) {
+    font-size: 12px;
 
-  a{
-    width: fit-content;
-    height: 100%;
-
-    font-size: 14px;
-    font-weight: 300;
-    color: #bb8a52;
-
-    text-decoration: underline;
   }
 
-  a:hover{
-  color: white;
+  @media (max-width: 615px) {
+
+    justify-content: center;
+
+  }
+
+
+  a{
+
+    font-size: 14px;
+    font-weight: 200;
+    color: #cccccc;
+
+    font-family: Roboto;
+
+    text-decoration: underline;
+    
+    &:hover{
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 705px) {
+      font-size: 12px;
+
+    }
+
+    @media (max-width: 615px) {
+
+      justify-content: center;
+
+    }
+
   }
 `
 

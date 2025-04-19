@@ -12,12 +12,10 @@ const ContactPage = () => {
     <ContactWrapper>
       <HeaderDesign title="CONTACT"/>
       <MainSection>
-        <h2 className='top'>Contact me via:</h2>
         <Display>
-          <ContactTile icon={<Call/>} type="(+234)-7067007134"/>
-          <ContactTile icon={<Whatsapp/>} type="(+234)-7067007134"/>
-          <ContactTile icon={<Twitter/>} type="" link ="https://x.com/code____r?t=soOD2wIx_IqSMcGd3u9-8w&s=09"/>
-          <ContactTile icon={<Gmail/>} type="opeoluwa.codes@gmail.com"/>
+          <ContactTile icon={<Whatsapp/>} info="(+1) 683-882-1123"/>
+          <ContactTile icon={<Twitter/>} info="@Happy_2_Code"/>
+          <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com"/>
         </Display>
       </MainSection>
     </ContactWrapper>
@@ -29,65 +27,89 @@ export default ContactPage;
 const ContactWrapper = styled.div`
   height: 100vh;
 
-  margin-left: 165px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  box-sizing: border-box;
-  padding-top: 2%;
-  padding-bottom: 2%;
-
-  background-color: #0b1e26;
-`
-const MainSection = styled.div`
-  width: 970px;
-  height: fit-content;
+  padding-left: 20.5%;
 
   display: flex;
   flex-direction: column;
   align-items: start;
 
   box-sizing: border-box;
-  
-  .top{
-    font-size: 30px;
-    font-weight: 500;
-    color: #bb8a52;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
-    margin-top: 0px;
+  background-color: black;
+`
+const MainSection = styled.div`
+  width: 89.5%;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  box-sizing: border-box;
+
+  @media (max-width: 914px) {
+    width: 78%;
+
   }
+
+    @media (max-width: 615px) {
+    width: 80%;
+
+  }
+  
 
 `
 const Display = styled.div`
   display: flex;
+
   flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
 
-  gap: 10px;
+  gap: 10%;
 
   width: 100%;
-  height: fit-content;
+  height: 100%;
+
+  padding-left: 5%;
 
   box-sizing: border-box;
-  padding-left: 5%;
-  padding-right: 5%;
+
 `
-const Call = styled(IoCallOutline)`
-  font-size: 50px;
-  color: #bb8a52;
-`
+
 const Whatsapp = styled(FaWhatsapp)`
   font-size: 50px;
-  color: #bb8a52;
+  color: white;
+
+  width: 100%;
+  height: 100%;
+
+  &:hover{
+    color: white;
+  }
 `
 const Gmail = styled(CgMail)`
   font-size: 50px;
-  color: #bb8a52;
+  color: white;
+
+  width: 100%;
+  height: 100%;
+
+  &:hover{
+    color: white;
+  }
 `
 const Twitter = styled(FaXTwitter)`
   font-size: 50px;
-  color: #bb8a52;
+  color: white;
+
+  width: 100%;
+  height: 100%;
+
+  &:hover{
+    color: white;
+  }
 `

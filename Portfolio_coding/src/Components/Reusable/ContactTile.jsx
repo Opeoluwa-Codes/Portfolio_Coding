@@ -9,10 +9,10 @@ const ContactTile = (props) => {
       <ContactIcon>
         {props.icon}
       </ContactIcon>
-      
-      <ContactType to={props.link}>
-        {props.type}
-      </ContactType>
+
+      <ContactInfo>
+        {props.info}
+      </ContactInfo>
     </ContactWrapper>
 
   );
@@ -21,34 +21,68 @@ const ContactTile = (props) => {
 export default ContactTile;
 
 const ContactWrapper = styled.div`
-  width: 350px;
-  height: 150px;
+  width: inherit;
+  height: 40px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin-bottom: 5%;
+
 `
 const ContactIcon = styled.div`
   width: 30%;
-  height: 100px;
+  height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border: 1px solid #bb8a52;
-`
-const ContactType = styled(Link)`
-  width: 60%;
-  height: 100px;
+  border: 1px solid black;
 
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  font-weight: 300;
-  font-family: Roboto;
+  @media (max-width: 499px) {
+    width: 20%;
+
+  }
+
+  &:hover{
+    background-color: black;
+  }
+`
+
+const ContactInfo = styled.div`
+  width: 60%;
+  height: 100%;
 
   display: flex;
-  justify-content: start;
   align-items: center;
+
+  font-size: 20px;
+
+
+  color: #cccccc;
+  font-weight: 200;
+
+  transition: all 1s ease-in-out;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 700px) {
+    font-size: 18px;
+
+  }
+
+  @media (max-width: 570px) {
+    font-size: 16px;
+
+  }
+
+  @media (max-width: 499px) {
+    width: 75%;
+    font-size: 14px;
+
+  }
 `
