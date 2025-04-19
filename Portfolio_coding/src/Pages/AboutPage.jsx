@@ -89,6 +89,8 @@ const TandB = styled.div`
   width: 89.5%;
   height: 70vh;
 
+  gap: 5%;
+
   @media (max-width: 914px) {
     width: 78%;
 
@@ -110,7 +112,7 @@ const TandB = styled.div`
   }
 
   @media (max-width: 499px) {
-    height: 82vh;
+    height: 85vh;
 
   }
 
@@ -178,14 +180,15 @@ const TitleAndDescription = styled.div`
 const BoxAndWhat = styled.div`
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
 
-  gap: 5px;
+  gap: 2%;
 
   width: 100%;
-  height: 70%;
+  height: fit-content;
 
   box-sizing: border-box;
+
 
   @media(max-width: 774px){
     height: 68%;
@@ -206,8 +209,6 @@ const What = styled.div`
 
   box-sizing: border-box;
 
-  border: 1px red solid;
-
   @media (max-width: 914px) {
     width: 55%;
 
@@ -216,7 +217,7 @@ const What = styled.div`
   @media (max-width: 594px) {
     gap: 10px;
 
-    width: 51%;
+    width: 55%;
 
   }
 
