@@ -66,6 +66,7 @@ const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
 
   box-sizing: border-box;
 

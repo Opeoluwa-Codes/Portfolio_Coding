@@ -21,6 +21,8 @@ const NextWrapper = styled.div`
 
     width: fit-content;
     height: fit-content;
+    margin: 0px;
+    padding: 0px;
 
     @media (min-width: 499px){
         display: none;
