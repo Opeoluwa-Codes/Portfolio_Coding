@@ -74,6 +74,8 @@ const AboutWrapper = styled.div`
 
   background-color: black;
 
+  position: relative;
+
 
   @media (max-width: 914px) {
     padding-left: 0%;
@@ -213,7 +215,7 @@ const What = styled.div`
   align-items: start;
   justify-content: center;
 
-  gap: 15px;
+  gap: 20px;
 
   width: 48.5%;
 

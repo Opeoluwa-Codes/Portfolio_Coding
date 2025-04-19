@@ -24,6 +24,9 @@ const NextWrapper = styled.div`
     margin: 0px;
     padding: 0px;
 
+    position: absolute;
+    bottom: 0px;
+
     @media (min-width: 499px){
         display: none;
     }

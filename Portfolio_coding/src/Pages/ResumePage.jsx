@@ -60,6 +60,8 @@ const ResumeWrapper = styled.div`
 
   background-color: black;
 
+  position: relative;
+
   @media (max-width: 914px) {
     padding-left: 0%;
 

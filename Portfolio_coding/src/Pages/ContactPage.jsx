@@ -40,6 +40,8 @@ const ContactWrapper = styled.div`
   padding-top: 2%;
   padding-bottom: 2%;
 
+  position: relative;
+
   background-color: black;
 
   @media (max-width: 499px){

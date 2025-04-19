@@ -142,6 +142,8 @@ const PortfolioWrapper = styled.div`
   padding-top: 3%;
   padding-left: 12%;
 
+  position: relative;
+
   background-color: black;
 
   @media (max-width: 914px) {
