@@ -82,6 +82,7 @@ const AboutWrapper = styled.div`
     align-items: center;
 
   }
+
 `
 
 const TandB = styled.div`
@@ -118,8 +119,11 @@ const TandB = styled.div`
 
   @media (max-width: 499px) {
     height: 85vh;
-    margin-top: 3%;
+    margin-top: 1%;
 
+    gap: 2%;
+
+    margin-bottom: 0%;
   }
 
 `
@@ -133,6 +137,11 @@ const TitleAndDescription = styled.div`
   align-items: start;
 
   box-sizing: border-box;
+
+  @media(max-width: 499px){
+    height: 35%;
+    border: 1px red solid;
+  }
 
 
   h2{
@@ -199,6 +208,11 @@ const BoxAndWhat = styled.div`
   @media(max-width: 774px){
     height: 68%;
   }
+
+  @media(max-width: 499px){
+    height: 55%;
+    border: 1px red solid;
+  }
   
 
 `
@@ -214,6 +228,7 @@ const What = styled.div`
   width: 48.5%;
 
   box-sizing: border-box;
+
 
   @media (max-width: 914px) {
     width: 55%;
@@ -231,6 +246,11 @@ const What = styled.div`
 
   @media (max-width: 499px) {
     width: 55%;
+    height: 100%;
+
+    justify-content: start;
+
+    overflow-x: scroll;
 
   }
 
