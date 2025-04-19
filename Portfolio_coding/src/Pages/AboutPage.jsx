@@ -66,7 +66,6 @@ const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
 
   box-sizing: border-box;
 
@@ -75,17 +74,17 @@ const AboutWrapper = styled.div`
 
   background-color: black;
 
+  border: 1px red solid;
+
 
   @media (max-width: 914px) {
     padding-left: 0%;
 
-    align-items: center;
-
   }
 
   @media (max-width: 499px) {
-    border: 1px red solid;
-
+    justify-content: center;
+    
   }
 
 
@@ -120,14 +119,14 @@ const TandB = styled.div`
 
   @media (max-width: 534px) {
     height: 76vh;
-
+    
   }
 
   @media (max-width: 499px) {
-    height: 85vh;
-    margin-top: 1%;
-
+    height: 82vh;
     gap: 2%;
+
+    border: 1px red solid;
   }
 
 `
@@ -210,7 +209,6 @@ const BoxAndWhat = styled.div`
 
   @media(max-width: 499px){
     height: 55%;
-    border: 1px red solid;
   }
   
 

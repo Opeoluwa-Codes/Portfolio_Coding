@@ -63,9 +63,6 @@ const ResumeWrapper = styled.div`
   @media (max-width: 914px) {
     padding-left: 0%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
   }
 
