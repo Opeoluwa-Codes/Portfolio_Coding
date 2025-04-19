@@ -220,6 +220,8 @@ const What = styled.div`
 
     width: 55%;
 
+    align-items: center;
+
   }
 
   @media (max-width: 499px) {

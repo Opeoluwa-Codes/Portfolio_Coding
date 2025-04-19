@@ -50,6 +50,11 @@ const Title = styled.div`
   font-family: Montserrat;
   color: white;
 
+  @media (max-width: 615px) {
+    text-align: center;
+
+    }
+
   /* @media (max-width: 705px) {
     font-size: 14px;
 
@@ -71,4 +76,9 @@ const Description = styled.div`
     font-size: 14px;
 
   }
+
+  @media (max-width: 615px) {
+    text-align: center;
+
+    }
 `
