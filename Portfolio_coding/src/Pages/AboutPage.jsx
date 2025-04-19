@@ -74,8 +74,6 @@ const AboutWrapper = styled.div`
 
   background-color: black;
 
-  border: 1px red solid;
-
 
   @media (max-width: 914px) {
     padding-left: 0%;
@@ -119,9 +117,9 @@ const TandB = styled.div`
 
   @media (max-width: 499px) {
     height: 80%;
-    gap: 2%;
+    gap: 5%;
 
-    border: 1px red solid;
+    margin-bottom: 5%;
   }
 
 `

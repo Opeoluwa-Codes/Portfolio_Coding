@@ -62,7 +62,7 @@ const BoxWrapper = styled.div`
 
   @media (max-width: 499px) {
     width: 46%;
-    height: 40%;
+    height: 45%;
 
   }
 
@@ -192,6 +192,11 @@ const Stat = styled.div`
 
   @media (max-width: 705px) {
     font-size: 25px;
+
+  }
+
+  @media (max-width: 499px) {
+    font-size: 20px;
 
   }
 
