@@ -84,7 +84,7 @@ const TitleAndDescription = styled.div`
   align-items: start;
   gap: 15px;
 
-  margin-bottom: 12px;
+  margin-bottom: 2%;
 
   box-sizing: border-box;
 
