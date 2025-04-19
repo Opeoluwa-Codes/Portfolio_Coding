@@ -47,7 +47,7 @@ const SidePanels= () => {
         
         <NavItem active={pathname === '/resume'}>
           <Links to='/resume'>
-            <p>MY RESUME</p>
+            <p>RESUME</p>
           </Links>
         </NavItem>
         
@@ -57,7 +57,7 @@ const SidePanels= () => {
         
         <NavItem active={pathname === '/toolstack'}>
           <Links to='/toolstack'>
-            <p>MY TOOLSTACK</p>
+            <p>TOOLSTACK</p>
           </Links>
         </NavItem>
         
@@ -67,7 +67,7 @@ const SidePanels= () => {
         
         <NavItem active={pathname === '/portfolio'}>
           <Links to='/portfolio'>
-            <p>MY PORTFOLIO</p>
+            <p>PORTFOLIO</p>
           </Links>
         </NavItem>
         

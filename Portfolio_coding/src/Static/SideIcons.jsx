@@ -94,8 +94,8 @@ const ToolStack = styled(VscTools)`
   color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
-    color: #cccccc;
-    /* transform: scale(1.2); */
+    color: #c0c0c0a0;
+    transform: scale(1.2);
   }
 
   @media (max-width: 596px) {
@@ -110,8 +110,8 @@ const About = styled(FaRegUser)`
   color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
-    color: #cccccc;
-    /* transform: scale(1.2); */
+    color: #c0c0c0a0;
+    transform: scale(1.2);
   }
   @media (max-width: 596px) {
     font-size: 15px;
@@ -125,8 +125,8 @@ const Resume = styled(IoMdBriefcase)`
   color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
-    color: #cccccc;
-    /* transform: scale(1.2); */
+    color: #c0c0c0a0;
+    transform: scale(1.2);
   }
 
   @media (max-width: 596px) {
