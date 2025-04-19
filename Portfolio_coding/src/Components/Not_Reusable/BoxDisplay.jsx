@@ -192,7 +192,7 @@ const Stat = styled.div`
 
 const Label = styled.div`
   font-size: 14px;
-  font-family: Roboto;
+  font-family: Arial;
   font-weight: 200;
 
   color: #cccccc;

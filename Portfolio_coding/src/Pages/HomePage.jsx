@@ -162,7 +162,7 @@ const LeftSide = styled.div`
 
     font-size: 14px;
     font-weight: 600;
-    font-family: Roboto;
+    font-family: Arial;
 
     box-sizing: border-box;
     padding: 10px;

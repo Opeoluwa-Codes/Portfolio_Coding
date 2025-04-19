@@ -58,7 +58,7 @@ const Title = styled.div`
 `
 const Description = styled.div`
   font-size: 14px;
-  font-family: Roboto;
+  font-family: Arial;
   font-weight: 200;
 
   color: #cccccc;

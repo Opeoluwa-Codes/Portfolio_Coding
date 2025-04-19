@@ -71,7 +71,7 @@ const SchoolorJobTitle = styled.div`
   font-weight: 400;
   color: white;
 
-  font-family: Roboto;
+  font-family: Arial;
 
   margin-bottom: 10px;
 
@@ -92,7 +92,7 @@ const Description = styled.div`
   font-weight: 200;
   color: #cccccc;
 
-  font-family: Roboto;
+  font-family: Arial;
 
   margin-bottom: 10px;
 
@@ -113,7 +113,7 @@ const Certification = styled.div`
   font-weight: 200;
   color: #cccccc;
 
-  font-family: Roboto;
+  font-family: Arial;
 
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@ const Certification = styled.div`
     font-weight: 200;
     color: #cccccc;
 
-    font-family: Roboto;
+    font-family: Arial;
 
     text-decoration: underline;
     

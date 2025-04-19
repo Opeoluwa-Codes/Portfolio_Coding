@@ -291,7 +291,7 @@ const Information = styled.div`
     color: white;
     font-size: 14px;
     font-weight: 600;
-    font-family: Roboto;
+    font-family: Arial;
 
     transition: all 1s ease-in-out;
 
@@ -317,7 +317,7 @@ const Information = styled.div`
     color: white;
     font-size: 14px;
     font-weight: 600;
-    font-family: Roboto;
+    font-family: Arial;
 
     transition: all 1s ease-in-out;
 
