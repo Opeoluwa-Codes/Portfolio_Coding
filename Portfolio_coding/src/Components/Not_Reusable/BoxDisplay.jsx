@@ -56,6 +56,7 @@ const BoxWrapper = styled.div`
 
   @media (max-width: 594px) {
     width: 46%;
+    height: 60%;
 
   }
 

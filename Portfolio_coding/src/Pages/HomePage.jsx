@@ -126,7 +126,7 @@ const LeftSide = styled.div`
   }
 
   p{
-    font-size: 14px;
+    font-size: 16px;
     
     font-weight: 200;
     color: #cccccc;
@@ -143,11 +143,6 @@ const LeftSide = styled.div`
       text-align: center;
 
       margin-bottom: 30px;
-    }
-
-    @media (max-width: 705px) {
-    font-size: 14px;
-
     }
     
   }
@@ -250,6 +245,7 @@ const BusinessName = styled.div`
   justify-content: space-between;
 
   font-size: 14px;
+  font-family: Montserrat;
 
   letter-spacing: 5px;
 
@@ -263,14 +259,14 @@ const BusinessName = styled.div`
 `
 
 const NOne = styled.div`
-    font-weight: 200;
+    font-weight: 300;
     color: #cccccc;
 
 `
 
 const NTwo = styled.div`
   color: white;
-  font-weight: 600;
+  font-weight: 500;
 `
 
 const RightSide = styled.div`

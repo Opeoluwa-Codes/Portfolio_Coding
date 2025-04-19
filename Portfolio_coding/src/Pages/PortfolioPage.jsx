@@ -155,20 +155,12 @@ const Buttons = styled.div`
   align-items: center;
   justify-content: center;
 
-  /* border: 1px red solid; */
-
   margin-bottom: 3%;
 
   @media (max-width: 914px) {
     width: 78%;
-  }
-
-  @media (max-width: 768px){
-    width: 70%;
-
+    
     justify-content: space-between;
-    /* width: 100%; */
-
   }
 
 `
@@ -176,12 +168,11 @@ const Buttons = styled.div`
 const Filter = styled.div`
 
   width: 90%;
+  height: 100%;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-top: 1%;
 
   gap: 2%;
 
@@ -200,12 +191,16 @@ const Filter = styled.div`
     display: none;
   }
 
-  @media (max-width: 809px) {
+  @media (max-width: 918px){
     justify-content: start;
   }
 
-  @media (max-width: 780px){
+  @media (max-width: 910px) {
+    
     width: 85%;
+  }
+
+  @media (max-width: 780px){
     gap: 5%;
 
   }
@@ -223,6 +218,7 @@ const FilterButton = styled.div`
     min-width: fit-content;
 
     display: flex;
+
     flex-wrap: nowrap;
 
     background-color: transparent;
@@ -232,17 +228,13 @@ const FilterButton = styled.div`
     cursor: pointer;
 
     &:hover{
+      color: #c0c0c0a0;
       transform: scale(1.05);
     }
 
-    @media (max-width: 990px){
+    /* @media (max-width: 990px){
       font-size: 12px;
-    }
-
-
-    &:hover{
-      color: white;
-    }
+    } */
 `
 
 const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
@@ -250,9 +242,7 @@ const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
 
   color: white;
 
-  /* border: 1px red solid; */
-
-  @media (min-width: 780px){
+  @media (min-width: 915px){
     display: none;
 
   }
@@ -268,9 +258,7 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
 
   color: white;
 
-  /* border: 1px red solid; */
-
-  @media (min-width: 780px){
+  @media (min-width: 915px){
     display: none;
 
   }

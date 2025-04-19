@@ -52,40 +52,58 @@ const SchoolorJob = styled.div`
   font-weight: 400;
   color: #cccccc;
 
-  margin-bottom: 5px;
-
   font-family: Montserrat;
+
+  height: 40px;
+
+  display: flex;
+  justify-content: start;
+  align-items: start;
 
   @media (max-width: 705px) {
     font-size: 14px;
 
   }
 
-  @media (max-width: 632px) {
-    font-size: 12px;
+  @media (max-width: 615px) {
+    justify-content: center;
 
   }
+
+  /* @media (max-width: 632px) {
+    font-size: 12px;
+
+  } */
 
 `
 const SchoolorJobTitle = styled.div`
 
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: white;
 
   font-family: Montserrat;
 
-  margin-bottom: 10px;
+  height: 40px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
   @media (max-width: 705px) {
     font-size: 14px;
 
   }
 
-  @media (max-width: 632px) {
-    font-size: 12px;
+  @media (max-width: 615px) {
+    justify-content: center;
 
   }
+
+  /* @media (max-width: 632px) {
+    font-size: 12px;
+
+  } */
 
 `
 const Description = styled.div`
@@ -96,12 +114,13 @@ const Description = styled.div`
 
   font-family: Arial;
 
+  margin-top: 5px;
   margin-bottom: 10px;
 
-  @media (max-width: 705px) {
+  /* @media (max-width: 705px) {
     font-size: 12px;
 
-  }
+  } */
 
   @media (max-width: 632px) {
     font-weight: 100;
@@ -123,10 +142,10 @@ const Certification = styled.div`
   gap: 5px;
 
 
-  @media (max-width: 705px) {
+  /* @media (max-width: 705px) {
     font-size: 12px;
 
-  }
+  } */
 
   @media (max-width: 615px) {
 
@@ -149,10 +168,10 @@ const Certification = styled.div`
       transform: scale(1.05);
     }
 
-    @media (max-width: 705px) {
+    /* @media (max-width: 705px) {
       font-size: 12px;
 
-    }
+    } */
 
     @media (max-width: 615px) {
 
