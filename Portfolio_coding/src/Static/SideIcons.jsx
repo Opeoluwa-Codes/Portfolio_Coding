@@ -74,7 +74,7 @@ const Home = styled(IoMdHome)`
   color: white;
   transition: all 1s ease-in-out;
 
-  color: ${props => props.active ? '#cccccc' : 'white'};
+  color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
   &:hover{
     color: #cccccc;
