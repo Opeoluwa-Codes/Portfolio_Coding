@@ -84,7 +84,9 @@ const TandB = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+
+  gap: 2%;
 
   width: 89.5%;
   height: 70vh;
