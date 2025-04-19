@@ -82,8 +82,6 @@ const Wrapper = styled.div`
   gap: 0px;
   background-color: transparent;
 
-  border: 1px #c0c0c0a0 solid;
-
   @media (max-width: 500px) {
     width: 90%;
     height: 100px;
