@@ -175,7 +175,7 @@ const Buttons = styled.div`
 
 const Filter = styled.div`
 
-  width: 80%;
+  width: 90%;
 
   display: flex;
   align-items: center;
@@ -183,7 +183,7 @@ const Filter = styled.div`
 
   margin-top: 1%;
 
-  gap: 3%;
+  gap: 2%;
 
   overflow-x: scroll;
 
@@ -204,8 +204,9 @@ const Filter = styled.div`
     justify-content: start;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 780px){
     width: 85%;
+    gap: 5%;
 
   }
 
@@ -215,24 +216,24 @@ const Filter = styled.div`
 const FilterButton = styled.div`
 
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 800;
+
+    font-family: Montserrat;
 
     min-width: fit-content;
 
     display: flex;
     flex-wrap: nowrap;
 
-    &:hover{
-      transform: scale(1.05);
-    }
-
     background-color: transparent;
 
-    color: ${props => props.active ? '#cccccc' : 'white'};
+    color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
     cursor: pointer;
 
-    
+    &:hover{
+      transform: scale(1.05);
+    }
 
     @media (max-width: 990px){
       font-size: 12px;
@@ -251,7 +252,7 @@ const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
 
   /* border: 1px red solid; */
 
-  @media (min-width: 768px){
+  @media (min-width: 780px){
     display: none;
 
   }
@@ -269,7 +270,7 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
 
   /* border: 1px red solid; */
 
-  @media (min-width: 768px){
+  @media (min-width: 780px){
     display: none;
 
   }

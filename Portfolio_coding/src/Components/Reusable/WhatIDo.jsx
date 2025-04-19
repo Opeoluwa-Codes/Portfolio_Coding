@@ -47,7 +47,7 @@ const InfoWrapper = styled.div`
 const Title = styled.div`
   font-size: 16px;
   font-weight: 700;
-  font-family: Cormorant;
+  font-family: Montserrat;
   color: white;
 
   @media (max-width: 705px) {

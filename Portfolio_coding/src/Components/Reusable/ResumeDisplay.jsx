@@ -49,10 +49,12 @@ const ResumeDisplayWrapper = styled.div`
 const SchoolorJob = styled.div`
 
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: #cccccc;
 
   margin-bottom: 5px;
+
+  font-family: Montserrat;
 
   @media (max-width: 705px) {
     font-size: 14px;
@@ -68,10 +70,10 @@ const SchoolorJob = styled.div`
 const SchoolorJobTitle = styled.div`
 
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   color: white;
 
-  font-family: Arial;
+  font-family: Montserrat;
 
   margin-bottom: 10px;
 

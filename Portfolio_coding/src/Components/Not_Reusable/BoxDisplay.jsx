@@ -172,7 +172,7 @@ const InnerZ = styled.div`
 const Stat = styled.div`
   font-size: 70px;
   font-weight: 600;
-  font-family: Cormorant;
+  font-family: Montserrat;
 
   color: white;
 

@@ -154,7 +154,7 @@ const Box = styled(motion.div)`
     font-size: 20px;
     font-weight: 400;
 
-    font-family: Cormorant;
+    font-family: Montserrat;
 
     width: 89.5%;
 
@@ -175,7 +175,7 @@ const Box = styled(motion.div)`
     font-size: 20px;
     font-weight: 400;
 
-    font-family: Cormorant;
+    font-family: Montserrat;
 
     width: 89.5%;
 

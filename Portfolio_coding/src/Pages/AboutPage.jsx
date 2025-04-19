@@ -210,7 +210,7 @@ const What = styled.div`
 
   h3{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
     
     margin-top: 0px;

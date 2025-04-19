@@ -115,7 +115,7 @@ const EduExp = styled.div`
 
     font-size: 25px;
     font-weight: 600;
-    font-family: Cormorant;
+    font-family: Montserrat;
 
     color: white;
 

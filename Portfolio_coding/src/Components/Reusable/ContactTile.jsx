@@ -39,10 +39,8 @@ const ContactIcon = styled.div`
   justify-content: center;
   align-items: center;
 
-  border: 1px solid black;
-
-  @media (max-width: 499px) {
-    width: 20%;
+  @media (max-width: 570px) {
+    width: 15%;
 
   }
 
@@ -58,11 +56,13 @@ const ContactInfo = styled.div`
   display: flex;
   align-items: center;
 
-  font-size: 20px;
+  font-size: 16px;
 
 
   color: #cccccc;
   font-weight: 200;
+
+  font-family: Arial;
 
   transition: all 1s ease-in-out;
 
@@ -70,19 +70,10 @@ const ContactInfo = styled.div`
     transform: scale(1.05);
   }
 
-  @media (max-width: 700px) {
-    font-size: 18px;
-
-  }
-
   @media (max-width: 570px) {
-    font-size: 16px;
-
-  }
-
-  @media (max-width: 499px) {
-    width: 75%;
     font-size: 14px;
+    width: 80%;
 
   }
+
 `

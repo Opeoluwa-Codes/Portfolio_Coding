@@ -130,9 +130,10 @@ const NavList = styled.div`
 const NavItem = styled.div`
   p {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 900;
+    font-family: Montserrat;
 
-    color: ${props => props.active ? '#cccccc' : 'white'};
+    color: ${props => props.active ? '#c0c0c0a0' : 'white'};
 
     margin-top: 20px;
     margin-bottom: 20px;

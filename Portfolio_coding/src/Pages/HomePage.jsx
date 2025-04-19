@@ -270,6 +270,7 @@ const NOne = styled.div`
 
 const NTwo = styled.div`
   color: white;
+  font-weight: 600;
 `
 
 const RightSide = styled.div`
@@ -320,7 +321,7 @@ const RoleDisplay = styled.div`
 
   font-size: 50px;
   font-weight: 800;
-  font-family: Cormorant;
+  font-family: Montserrat;
 
   letter-spacing: 2px;
 
