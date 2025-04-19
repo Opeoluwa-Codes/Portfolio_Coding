@@ -113,6 +113,7 @@ const TandB = styled.div`
 
   @media (max-width: 499px) {
     height: 85vh;
+    margin-top: 3%;
 
   }
 
@@ -137,7 +138,7 @@ const TitleAndDescription = styled.div`
     font-weight: 600;
     color: white;
 
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     margin-top: 0px;
 
     @media (max-width: 615px) {
