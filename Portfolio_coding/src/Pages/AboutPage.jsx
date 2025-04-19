@@ -33,19 +33,23 @@ const AboutPage = () => {
   return (
     <AboutWrapper>
       <HeaderDesign title="ABOUT ME"/>
-      <TitleAndDescription>
-        <h2>{displayedDescription}</h2>
-        <p>I create engaging websites with ReactJS that work well on all devices. I build user-friendly interfaces with smooth interactions and secure login systems. I connect frontends to backends and use Git/GitHub for team projects. I'm seeking new opportunities and mentorship connections!</p>
-      </TitleAndDescription>
-      <BoxAndWhat>
-        <BoxDisplay/>
-        <What>
-          <h3>What I Do!</h3>
-          <WhatIDo image={Interactive} title="Interactive UI" description="Crafting dynamic and user-friendly interfaces and ensuring seamless interactivity."/>
-          <WhatIDo image={Responsive} title="Responsive UI" description="Designing adaptable and visually appealing layouts and guaranteeing optimal performance."/>
-          <WhatIDo image={Functional} title="Functional Websites" description="Building robust web solutions and managing authentication efficiently."/>
-        </What>
-      </BoxAndWhat>
+
+      <TandB>
+        <TitleAndDescription>
+          <h2>{displayedDescription}</h2>
+          <p>I create engaging websites with ReactJS that work well on all devices. I build user-friendly interfaces with smooth interactions and secure login systems. I connect frontends to backends and use Git/GitHub for team projects. I'm seeking new opportunities and mentorship connections!</p>
+        </TitleAndDescription>
+        <BoxAndWhat>
+          <BoxDisplay/>
+          <What>
+            <h3>What I Do!</h3>
+            <WhatIDo image={Interactive} title="Interactive UI" description="Crafting dynamic and user-friendly interfaces and ensuring seamless interactivity."/>
+            <WhatIDo image={Responsive} title="Responsive UI" description="Designing adaptable and visually appealing layouts and guaranteeing optimal performance."/>
+            <WhatIDo image={Functional} title="Functional Websites" description="Building robust web solutions and managing authentication efficiently."/>
+          </What>
+        </BoxAndWhat>
+      </TandB>
+
     </AboutWrapper>
   );
 };
@@ -75,22 +79,24 @@ const AboutWrapper = styled.div`
   }
 `
 
-const TitleAndDescription = styled.div`
-  height: fit-content;
-  width: 89.5%;
+const TandB = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
 
-  margin-bottom: 2%;
-
-  box-sizing: border-box;
+  width: 89.5%;
+  height: 70vh;
 
   @media (max-width: 914px) {
     width: 78%;
 
+  }
+
+  @media(max-width: 774px){
+    height: 74vh;
+    
   }
 
   @media (max-width: 615px) {
@@ -98,18 +104,38 @@ const TitleAndDescription = styled.div`
 
   }
 
+  @media (max-width: 534px) {
+    height: 76vh;
+
+  }
+
+  @media (max-width: 500px) {
+    height: 85vh;
+
+  }
+
+`
+
+const TitleAndDescription = styled.div`
+  height: fit-content;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  box-sizing: border-box;
+
 
   h2{
     width: 100%;
     height: fit-content;
 
-    gap: 10px;
-
     font-size: 25px;
     font-weight: 600;
     color: white;
 
-    margin-bottom: 0px;
+    margin-bottom: 1%;
     margin-top: 0px;
 
     @media (max-width: 615px) {
@@ -131,6 +157,7 @@ const TitleAndDescription = styled.div`
     font-size: 14px;
     font-weight: 200;
     color: #cccccc;
+
     
     text-align: left;
 
@@ -144,11 +171,6 @@ const TitleAndDescription = styled.div`
 
     }
 
-    @media (max-width: 705px) {
-    font-size: 14px;
-
-    }
-
   }
 `
 
@@ -158,27 +180,14 @@ const BoxAndWhat = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 89.5%;
-  height: 55%;
+  width: 100%;
+  height: 70%;
 
   box-sizing: border-box;
 
-
-  @media (max-width: 914px) {
-    width: 78%;
-
+  @media(max-width: 774px){
+    height: 68%;
   }
-
-  @media (max-width: 615px) {
-    width: 80%;
-
-  }
-
-  @media (max-width: 594px) {
-    height: 60%;
-
-  }
-  
   
 
 `
