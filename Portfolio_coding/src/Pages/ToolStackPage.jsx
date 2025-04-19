@@ -9,6 +9,8 @@ import { SiTypescript } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 
+import NextButton from '../Components/Reusable/NextButton';
+
 const ToolStackPage = () => {
   return (
     <ToolStackWrapper>
@@ -22,6 +24,8 @@ const ToolStackPage = () => {
             <IconWrapper delay="20s"><TypeScript /></IconWrapper>
             <IconWrapper delay="25s"><GitHub /></IconWrapper>
         </Tools>
+
+        <NextButton link="/portfolio"/>
     </ToolStackWrapper>
   );
 };
@@ -149,9 +153,10 @@ const ToolStackWrapper = styled.div`
     background-color: black;
 
     @media (max-width: 914px) {
-        padding-left: 0%;
-        align-items: center;
+      padding-left: 0%;
+      align-items: center;
     }
+
 `;
 
 const Tools = styled.div`
@@ -168,6 +173,10 @@ const Tools = styled.div`
     perspective: 500px;
     height: 300px;
     margin-top: 10%;
+  }
+
+  @media (max-width: 499px) {
+    margin-bottom: 55%;
   }
 `;
 

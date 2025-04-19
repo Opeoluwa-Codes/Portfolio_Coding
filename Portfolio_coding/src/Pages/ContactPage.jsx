@@ -7,6 +7,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { FaXTwitter } from "react-icons/fa6";
 
+import NextButton from '../Components/Reusable/NextButton';
+
 const ContactPage = () => {
   return (
     <ContactWrapper>
@@ -18,6 +20,7 @@ const ContactPage = () => {
           <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com"/>
         </Display>
       </MainSection>
+      <NextButton link="/"/>
     </ContactWrapper>
   );
 };
@@ -38,6 +41,11 @@ const ContactWrapper = styled.div`
   padding-bottom: 2%;
 
   background-color: black;
+
+  @media (max-width: 499px){
+    align-items: center;
+    padding-left: 0%;
+  }
 `
 const MainSection = styled.div`
   width: 89.5%;
@@ -54,8 +62,13 @@ const MainSection = styled.div`
 
   }
 
-    @media (max-width: 615px) {
+  @media (max-width: 615px) {
     width: 80%;
+
+  }
+
+  @media (max-width: 499px) {
+    margin-bottom: 7%;
 
   }
   

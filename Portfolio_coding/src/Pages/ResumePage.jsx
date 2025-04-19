@@ -4,6 +4,8 @@ import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import ResumeDisplay from '../Components/Reusable/ResumeDisplay'
 import DialogueBox from '../Components/Reusable/DialogueBox';
 
+import NextButton from '../Components/Reusable/NextButton';
+
 const ResumePage = () => {
   return (
     <ResumeWrapper>
@@ -15,9 +17,7 @@ const ResumePage = () => {
             <h2>EDUCATION</h2>
               <Education>
                 
-                  <ResumeDisplay name='Senator Abiru Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='Click' here='here' link=''/>
-                
-                  <ResumeDisplay name='Obafemi Awolowo University' title='BSc. Biochemistry' description='Obafemi Awolowo University graduate with a Second Class Upper in Biochemistry.' view='' here='' link='' target=''/>
+                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='Click' here='here' link=''/>
 
               </Education>
           </One>
@@ -35,6 +35,8 @@ const ResumePage = () => {
           </Two>
 
         </EduExp>
+
+        <NextButton link="/toolstack"/>
         
     </ResumeWrapper>
   );
@@ -108,6 +110,7 @@ const EduExp = styled.div`
 
   @media (max-width: 499px) {
     width: 75%;
+    margin-bottom: 3%;
 
   }
 

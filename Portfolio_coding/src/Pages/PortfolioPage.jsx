@@ -11,6 +11,8 @@ import PortfolioItem from '../Components/Reusable/PortfolioItem';
 import Farm from '../Assets/PNG/farmera.png'
 import Pf1 from '../Assets/PNG/pf1.png'
 
+import NextButton from '../Components/Reusable/NextButton';
+
 const portfolioItems = [
   { id: 1, type: 'Portfolio', img: Pf1, alt: 'Portfolio_One', title: 'Freelancing Portfolio', description: 'This is a simple portfolio website a freelancer can use to display their resume and past works. This solution was created using ReactJS.', demolink: '', sourcelink: ''},
   { id: 2, type: 'E-commerce', img: Farm, alt: 'Farmera', title: 'Farmera', description: 'Farmera is a platform that connects farmers and buyers, enabling a seamless marketplace for agricultural goods. Our mission is to empower farmers and provide fresh, high-quality products to buyers efficiently. This solution was created using ReactJS.', demolink: 'https://farm-olive.vercel.app/', sourcelink: '' },
@@ -117,6 +119,8 @@ const PortfolioPage = () => {
         
   
       </PortfolioDisplay>
+
+      <NextButton link="/contact"/>
 
     </PortfolioWrapper>
 
@@ -297,6 +301,8 @@ const PortfolioDisplay = styled.div`
   @media (max-width: 500px) {
     padding: 10px;
     padding-left: 6%;
+
+    margin-bottom: 18%;
 
   }
 
