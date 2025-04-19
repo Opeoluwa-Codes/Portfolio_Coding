@@ -35,7 +35,7 @@ const AboutPage = () => {
       <HeaderDesign title="ABOUT ME"/>
       <TitleAndDescription>
         <h2>{displayedDescription}</h2>
-        <p>I create engaging websites with ReactJS that work well on all devices. I'm seeking new opportunities and mentorship connections!</p>
+        <p>I create engaging websites with ReactJS that work well on all devices. I build user-friendly interfaces with smooth interactions and secure login systems. I connect frontends to backends and use Git/GitHub for team projects. I'm seeking new opportunities and mentorship connections!</p>
       </TitleAndDescription>
       <BoxAndWhat>
         <BoxDisplay/>
@@ -144,10 +144,10 @@ const TitleAndDescription = styled.div`
 
     }
 
-    /* @media (max-width: 705px) {
+    @media (max-width: 705px) {
     font-size: 14px;
 
-    } */
+    }
 
   }
 `
