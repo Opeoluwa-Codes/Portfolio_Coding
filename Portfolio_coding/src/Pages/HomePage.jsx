@@ -146,7 +146,7 @@ const LeftSide = styled.div`
     }
 
     @media (max-width: 705px) {
-    font-size: 12px;
+    font-size: 14px;
 
     }
     
@@ -169,10 +169,10 @@ const LeftSide = styled.div`
 
     transition: all 1s ease-in-out;
 
-    @media (max-width: 705px) {
-      font-size: 12px;
+    /* @media (max-width: 705px) {
+      font-size: 14px;
 
-    }
+    } */
   }
 
   button:hover{
@@ -241,7 +241,7 @@ const Others = styled.div`
 const BusinessName = styled.div`
   
   position: fixed;
-  top: 5%;
+  top: 2%;
 
   width: fit-content;
   height: fit-content;
@@ -253,13 +253,13 @@ const BusinessName = styled.div`
 
   letter-spacing: 5px;
 
-  @media (max-width: 785px) {
+  /* @media (max-width: 785px) {
     font-size: 12px;
   }
 
   @media (max-width: 705px) {
     font-size: 10px;
-  }
+  } */
 `
 
 const NOne = styled.div`
