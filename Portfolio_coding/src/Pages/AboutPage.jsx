@@ -82,11 +82,6 @@ const AboutWrapper = styled.div`
 
   }
 
-  @media (max-width: 499px) {
-    justify-content: center;
-    
-  }
-
 
 `
 
@@ -123,7 +118,7 @@ const TandB = styled.div`
   }
 
   @media (max-width: 499px) {
-    height: 82vh;
+    height: 80%;
     gap: 2%;
 
     border: 1px red solid;
