@@ -55,8 +55,14 @@ const BoxWrapper = styled.div`
   }
 
   @media (max-width: 594px) {
-    width: 46%;
+    width: 43%;
     height: 60%;
+
+  }
+
+  @media (max-width: 499px) {
+    width: 46%;
+    height: 40%;
 
   }
 

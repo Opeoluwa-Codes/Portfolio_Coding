@@ -9,7 +9,7 @@ import Responsive from "../Assets/PNG/Responsive.png"
 import Functional from "../Assets/PNG/Functional.png"
 
 const AboutPage = () => {
-  const description = "I am Opeoluwa, FrontEnd Developer"
+  const description = "I am Opeoluwa..."
   const [displayedDescription, setDisplayedDescription] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -86,8 +86,6 @@ const TandB = styled.div`
   align-items: center;
   justify-content: start;
 
-  gap: 2%;
-
   width: 89.5%;
   height: 70vh;
 
@@ -111,8 +109,8 @@ const TandB = styled.div`
 
   }
 
-  @media (max-width: 500px) {
-    height: 85vh;
+  @media (max-width: 499px) {
+    height: 82vh;
 
   }
 
@@ -179,8 +177,10 @@ const TitleAndDescription = styled.div`
 
 const BoxAndWhat = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+
+  gap: 5px;
 
   width: 100%;
   height: 70%;
@@ -200,11 +200,13 @@ const What = styled.div`
   align-items: start;
   justify-content: center;
 
-  gap: 25px;
+  gap: 15px;
 
   width: 48.5%;
 
   box-sizing: border-box;
+
+  border: 1px red solid;
 
   @media (max-width: 914px) {
     width: 55%;
@@ -215,6 +217,11 @@ const What = styled.div`
     gap: 10px;
 
     width: 51%;
+
+  }
+
+  @media (max-width: 499px) {
+    width: 55%;
 
   }
 
