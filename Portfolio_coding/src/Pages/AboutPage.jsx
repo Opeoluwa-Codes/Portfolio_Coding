@@ -83,6 +83,12 @@ const AboutWrapper = styled.div`
 
   }
 
+  @media (max-width: 499px) {
+    border: 1px red solid;
+
+  }
+
+
 `
 
 const TandB = styled.div`
@@ -122,8 +128,6 @@ const TandB = styled.div`
     margin-top: 1%;
 
     gap: 2%;
-
-    margin-bottom: 0%;
   }
 
 `
@@ -137,11 +141,6 @@ const TitleAndDescription = styled.div`
   align-items: start;
 
   box-sizing: border-box;
-
-  @media(max-width: 499px){
-    height: 35%;
-    border: 1px red solid;
-  }
 
 
   h2{
