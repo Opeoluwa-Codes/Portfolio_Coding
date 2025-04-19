@@ -78,7 +78,7 @@ const Home = styled(IoMdHome)`
 
   &:hover{
     color: #cccccc;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 
   @media (max-width: 596px) {
@@ -95,7 +95,7 @@ const ToolStack = styled(VscTools)`
 
   &:hover{
     color: #cccccc;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 
   @media (max-width: 596px) {
@@ -111,7 +111,7 @@ const About = styled(FaRegUser)`
 
   &:hover{
     color: #cccccc;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
   @media (max-width: 596px) {
     font-size: 15px;
@@ -126,7 +126,7 @@ const Resume = styled(IoMdBriefcase)`
 
   &:hover{
     color: #cccccc;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 
   @media (max-width: 596px) {
@@ -142,7 +142,7 @@ const Portfolio = styled(GoFileSubmodule)`
 
   &:hover{
     color: #cccccc;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 
   @media (max-width: 596px) {
@@ -159,7 +159,7 @@ const Contact = styled(GiTalk)`
 
   &:hover{
     color: #cccccc;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 
   @media (max-width: 596px) {

@@ -378,9 +378,9 @@ const SecondBox = styled.div`
   transition: all 1.5s ease-in-out;
 
 
-    &:hover{
+    /* &:hover{
       transform: scale(1.5);
-    }
+    } */
   }
 
   @media (max-width: 995px) {

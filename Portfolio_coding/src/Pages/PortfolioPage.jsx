@@ -231,9 +231,9 @@ const FilterButton = styled.div`
 
     cursor: pointer;
 
-    &:hover{
+    /* &:hover{
       transform: scale(1.05);
-    }
+    } */
 
     @media (max-width: 990px){
       font-size: 12px;
@@ -259,7 +259,7 @@ const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
 
   &:hover{
     color: white;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 `
 
@@ -277,7 +277,7 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
 
   &:hover{
     color: white;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 `
 

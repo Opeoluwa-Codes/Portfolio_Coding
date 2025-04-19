@@ -142,7 +142,7 @@ const NavItem = styled.div`
 
     &:hover{
       color: #cccccc;
-      transform: scale(1.2);
+      /* transform: scale(1.2); */
     }
   }
   

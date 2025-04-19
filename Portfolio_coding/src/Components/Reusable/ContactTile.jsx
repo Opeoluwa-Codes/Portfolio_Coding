@@ -66,9 +66,9 @@ const ContactInfo = styled.div`
 
   transition: all 1s ease-in-out;
 
-  &:hover{
+  /* &:hover{
     transform: scale(1.05);
-  }
+  } */
 
   @media (max-width: 570px) {
     font-size: 14px;
