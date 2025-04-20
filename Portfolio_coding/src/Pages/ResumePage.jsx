@@ -17,7 +17,7 @@ const ResumePage = () => {
             <h2>EDUCATION</h2>
               <Education>
                 
-                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='Download' here='resume' link='../Assets/File/Resume.pdf' download='Resume.pdf'/>
+                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='Download' here='resume' link='https://drive.google.com/file/d/1WfhTHdp3H-770eMhbkChK_qLLp6pHNez/view?usp=sharing'/>
 
               </Education>
           </One>
