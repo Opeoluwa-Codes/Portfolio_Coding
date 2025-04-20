@@ -17,7 +17,7 @@ const ResumePage = () => {
             <h2>EDUCATION</h2>
               <Education>
                 
-                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='Click' here='here' link=''/>
+                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='Download' here='resume' link='../Assets/File/Resume.pdf' download='Resume.pdf'/>
 
               </Education>
           </One>
@@ -27,7 +27,7 @@ const ResumePage = () => {
               <Experience>
 
                 <Cover>
-                  <ResumeDisplay name='Farmera' title='FrontEnd Engineer' description='Farmera is an organization focused on connecting farmers and buyers.' view=''/>
+                  <ResumeDisplay name='Farmera' title='FrontEnd Engineer' description='Farmera is an organization focused on connecting farmers and buyers.'/>
                   <DialogueBox from='From: July 2024' to='To: December 2024' one='I worked in a team tasked with creating a simple solution for marketing farm produce. ' two='I worked on the sign-in page using ReactJS.' three='I developed an appealing sign-in page using HTML and CSS (Styled-Components).' four="I connected the sign-in frontend to the project's backend using Axios." five='I utilised AuthContext for easy access and management of authentication data.' six='I defined specific pages accessible by each category of users using Protected-Route.'/>
                 </Cover>
 
@@ -48,7 +48,6 @@ export default ResumePage;
 const ResumeWrapper = styled.div`
   
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
