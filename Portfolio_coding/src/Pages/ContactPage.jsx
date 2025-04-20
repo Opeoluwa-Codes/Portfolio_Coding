@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import ContactTile from '../Components/Reusable/ContactTile';
-import { IoCallOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { FaXTwitter } from "react-icons/fa6";
@@ -15,9 +14,9 @@ const ContactPage = () => {
       <HeaderDesign title="CONTACT"/>
       <MainSection>
         <Display>
-          <ContactTile icon={<Whatsapp/>} info="(+1) 683-882-1123"/>
-          <ContactTile icon={<Twitter/>} info="@Happy_2_Code"/>
-          <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com"/>
+          <ContactTile icon={<Whatsapp/>} info="(+1) 683-882-1123" type="whatsapp"/>
+          <ContactTile icon={<Twitter/>} info="@Happy_2_Code" type="twitter"/>
+          <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com" type="email"/>
         </Display>
       </MainSection>
       <NextButton link="/"/>

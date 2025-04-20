@@ -1,8 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ContactTile = (props) => {
+
+  const handleRedirect = () => {
+
+    switch (props.type) {
+
+      case 'whatsapp':
+        const whatsappNumber = props.info.replace(/\D/g, '');
+        window.location.href = `https://wa.me/${whatsappNumber}`;
+        break;
+
+      case 'email':
+        const emailAddress = props.info.trim();
+        window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}`;
+        break;
+
+      case 'twitter':
+        const username = props.info.startsWith('@') ? props.info.substring(1) : props.info;
+        window.location.href = `https://x.com/${username}`;
+        break;
+
+      default:
+        console.log('No redirect type specified');
+
+    }
+  }
+
   return (
     
     <ContactWrapper>
@@ -10,7 +35,7 @@ const ContactTile = (props) => {
         {props.icon}
       </ContactIcon>
 
-      <ContactInfo>
+      <ContactInfo onClick={handleRedirect}>
         {props.info}
       </ContactInfo>
     </ContactWrapper>
@@ -61,6 +86,8 @@ const ContactInfo = styled.div`
   font-weight: 200;
 
   font-family: Arial;
+
+  cursor: pointer;
 
   transition: all 1s ease-in-out;
 
