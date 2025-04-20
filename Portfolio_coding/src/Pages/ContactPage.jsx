@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import ContactTile from '../Components/Reusable/ContactTile';
-import { FaWhatsapp } from "react-icons/fa";
+// import { FaWhatsapp } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { FaXTwitter } from "react-icons/fa6";
+import { IoCallOutline } from "react-icons/io5";
 
 import NextButton from '../Components/Reusable/NextButton';
 
@@ -14,7 +15,7 @@ const ContactPage = () => {
       <HeaderDesign title="CONTACT"/>
       <MainSection>
         <Display>
-          <ContactTile icon={<Whatsapp/>} info="(+1) 683-882-1123" type="whatsapp"/>
+          <ContactTile icon={<Call/>} info="(+1) 683-882-1123" type="phone"/>
           <ContactTile icon={<Twitter/>} info="@Happy_2_Code" type="twitter"/>
           <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com" type="email"/>
         </Display>
@@ -95,7 +96,7 @@ const Display = styled.div`
 
 `
 
-const Whatsapp = styled(FaWhatsapp)`
+const Call = styled(IoCallOutline)`
   font-size: 50px;
   color: white;
 

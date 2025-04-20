@@ -7,9 +7,9 @@ const ContactTile = (props) => {
 
     switch (props.type) {
 
-      case 'whatsapp':
-        const whatsappNumber = props.info.replace(/\D/g, '');
-        window.location.href = `https://wa.me/${whatsappNumber}`;
+      case 'phone':
+        const cleanPhone = props.info.replace(/\D/g, '');
+        window.location.href = `tel:${cleanPhone}`;
         break;
 
       case 'email':
