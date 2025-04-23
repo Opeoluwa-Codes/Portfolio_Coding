@@ -102,7 +102,7 @@ const Cursor = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-  height: 100vh;
+  max-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -112,6 +112,7 @@ const AboutWrapper = styled.div`
   box-sizing: border-box;
 
   padding-left: 0%;
+  padding-bottom: 20px;
 
   background-color: black;
 
