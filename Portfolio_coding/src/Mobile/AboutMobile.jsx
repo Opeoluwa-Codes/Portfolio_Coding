@@ -102,7 +102,7 @@ const Cursor = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-  max-height: 100vh;
+  height: 90vh;
 
   display: flex;
   flex-direction: column;
@@ -190,7 +190,7 @@ const BoxAndWhat = styled.div`
   justify-content: start;
   align-items: center;
 
-  gap: 5%;
+  gap: 3%;
 
   width: 83%;
   height: 75%;
