@@ -129,7 +129,6 @@ export default PortfolioMobile;
 
 const PortfolioWrapper = styled.div`
 
-  min-height: 65vh;
   max-height: 100vh;
 
   display: flex;
@@ -235,7 +234,6 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
 const PortfolioDisplay = styled.div`
 
   width: 70%; 
-  min-height: 45%;
   max-height: 75%;
 
   overflow-y: auto;
@@ -256,7 +254,7 @@ const PortfolioDisplay = styled.div`
   padding-left: 6%;
 
   margin-top: 5%;
-  margin-bottom: 140px;
+  margin-bottom: 20px;
 
 `
 

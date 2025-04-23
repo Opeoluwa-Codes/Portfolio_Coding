@@ -68,11 +68,6 @@ const SchoolorJob = styled.div`
 
   }
 
-  /* @media (max-width: 632px) {
-    font-size: 12px;
-
-  } */
-
 `
 const SchoolorJobTitle = styled.div`
 
@@ -89,7 +84,7 @@ const SchoolorJobTitle = styled.div`
   align-items: center;
 
   @media (max-width: 705px) {
-    font-size: 14px;
+    font-size: 16px;
 
   }
 
@@ -98,10 +93,6 @@ const SchoolorJobTitle = styled.div`
 
   }
 
-  /* @media (max-width: 632px) {
-    font-size: 12px;
-
-  } */
 
 `
 const Description = styled.div`
@@ -115,14 +106,9 @@ const Description = styled.div`
   margin-top: 5px;
   margin-bottom: 10px;
 
-  /* @media (max-width: 705px) {
-    font-size: 12px;
-
-  } */
 
   @media (max-width: 632px) {
     font-weight: 100;
-
   }
 
 `

@@ -86,11 +86,9 @@ const HomeWrapper = styled.div`
 
   box-sizing: border-box;
 
-  padding: 0% 1.7% 1% 1.7%;
+  padding: 0% 1.75% 1% 1.75%;
 
   position: relative;
-
-  border: none;
 
   img{
 
@@ -155,6 +153,8 @@ const Others = styled.div`
 
   justify-content: center;
   align-items: center;
+
+  height: 90%;
 
 `
 

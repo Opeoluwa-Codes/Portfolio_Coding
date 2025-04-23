@@ -42,8 +42,8 @@ export default ResumeMobile;
 
 
 const ResumeWrapper = styled.div`
-  
-  height: 100vh;
+
+  max-height: 85vh;
 
   display: flex;
   flex-direction: column;
@@ -52,6 +52,7 @@ const ResumeWrapper = styled.div`
   box-sizing: border-box;
 
   padding-left: 0%;
+  padding-bottom: 20px;
 
   background-color: black;
 
@@ -70,9 +71,9 @@ const EduExp = styled.div`
   flex-direction: column;
   
   align-items: center;
-  justify-content: center;
 
-  gap: 1%;
+  gap: 5%;
+
 
   h2{
 
@@ -90,7 +91,7 @@ const EduExp = styled.div`
 
 const One = styled.div`
 
-  height: 40%;
+  height: fit-content;
   width: 100%;
   text-align: center;
 
@@ -103,7 +104,7 @@ const One = styled.div`
 
 const Two = styled.div`
 
-  height: 50%;
+  height: fit-content;
   width: 100%;
   text-align: center;
 
@@ -111,12 +112,8 @@ const Two = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  
-  padding-top: 18%;
 
   box-sizing: border-box;
-
-  border-top: 1px white solid;
 
 `
 
@@ -160,8 +157,6 @@ const Experience = styled.div`
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-
-  margin-top: 2%;
 
   padding-bottom: 7%;
   box-sizing: border-box;
