@@ -6,7 +6,7 @@ import DialogueBox from '../Components/Reusable/DialogueBox';
 
 import NextButton from '../Components/Reusable/NextButton';
 
-const ResumePage = () => {
+const ResumeDesktop = () => {
   return (
     <ResumeWrapper>
 
@@ -42,7 +42,7 @@ const ResumePage = () => {
   );
 };
 
-export default ResumePage;
+export default ResumeDesktop;
 
 
 const ResumeWrapper = styled.div`
@@ -63,8 +63,6 @@ const ResumeWrapper = styled.div`
 
   @media (max-width: 914px) {
     padding-left: 0%;
-
-
   }
 
 `
@@ -78,38 +76,25 @@ const EduExp = styled.div`
 
 
   @media (min-width: 700px) {
-
     margin-top: 0%;
 
     height: 70vh;
-
   }
-
 
   @media (max-width: 914px) {
     width: 84%;
-
   }
 
   @media (max-width: 767px) {
     width: 86%;
-
   }
 
   @media (max-width: 705px) {
     width: 84%;
-
   }
 
   @media (max-width: 615px) {
     width: 80%;
-
-  }
-
-  @media (max-width: 499px) {
-    width: 75%;
-    margin-bottom: 3%;
-
   }
 
   h2{
@@ -125,10 +110,10 @@ const EduExp = styled.div`
 
     @media (max-width: 705px) {
       font-size: 22px;
-
     }
 
   }
+  
 `
 
 const One = styled.div`
@@ -137,9 +122,7 @@ const One = styled.div`
   width: 100%;
 
   @media (max-width: 615px) {
-
     text-align: center;
-
   }
 
 `
@@ -157,20 +140,16 @@ const Two = styled.div`
   border-top: 1px white solid;
 
   @media (min-width: 700px) {
-
     margin-top: 5%;
     padding-top: 0%;
-
   }
 
   @media (max-width: 615px) {
-
     text-align: center;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 
 `
@@ -200,20 +179,15 @@ const Education = styled.div`
 
   @media (max-width: 767px) {
     gap: 1.5%;
-
   }
 
   @media (max-width: 615px) {
-
     text-align: center;
-
-
   }
 
 `
 
 const Experience = styled.div`
-
 
   width: fit-content;
   height: fit-content;
@@ -237,14 +211,10 @@ const Experience = styled.div`
 
   @media (max-width: 767px) {
     gap: 1.5%;
-
   }
 
   @media (max-width: 615px) {
-
     text-align: center;
-
-
   }
 
 `
@@ -255,17 +225,13 @@ const Cover = styled.div`
   height: fit-content;
   flex-shrink: 0px;
 
-
   @media (max-width: 767px) {
     min-width: 48.5%;
-
   }
 
   @media (max-width: 615px) {
-
     text-align: center;
     align-items: center;
-
   }
 
 `

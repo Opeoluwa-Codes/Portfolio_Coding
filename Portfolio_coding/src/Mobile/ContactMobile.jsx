@@ -2,56 +2,52 @@ import React from 'react'
 import styled from 'styled-components';
 import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import ContactTile from '../Components/Reusable/ContactTile';
-// import { FaWhatsapp } from "react-icons/fa";
+
 import { CgMail } from "react-icons/cg";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
 
-import NextButton from '../Components/Reusable/NextButton';
-
-const ContactPage = () => {
+const ContactMobile = () => {
   return (
     <ContactWrapper>
+
       <HeaderDesign title="CONTACT"/>
+
       <MainSection>
+
         <Display>
           <ContactTile icon={<Call/>} info="(+1) 683-882-1123" type="phone"/>
           <ContactTile icon={<Twitter/>} info="@Happy_2_Code" type="twitter"/>
           <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com" type="email"/>
         </Display>
+
       </MainSection>
-      <NextButton link="/"/>
+
     </ContactWrapper>
   );
 };
 
-export default ContactPage;
+export default ContactMobile;
 
 const ContactWrapper = styled.div`
-  height: 100vh;
+  height: 35vh;
 
-  padding-left: 20.5%;
+  padding-left: 0%;
 
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 
   box-sizing: border-box;
-  padding-top: 2%;
-  padding-bottom: 2%;
 
   position: relative;
 
   background-color: black;
 
-  @media (max-width: 499px){
-    align-items: center;
-    padding-left: 0%;
-  }
 `
 const MainSection = styled.div`
-  width: 89.5%;
-  height: 80vh;
+  width: 80%;
+  height: 60%;
 
   display: flex;
   flex-direction: column;
@@ -59,21 +55,7 @@ const MainSection = styled.div`
 
   box-sizing: border-box;
 
-  @media (max-width: 914px) {
-    width: 78%;
-
-  }
-
-  @media (max-width: 615px) {
-    width: 80%;
-
-  }
-
-  @media (max-width: 499px) {
-    margin-bottom: 7%;
-
-  }
-  
+  margin-top: 5%;
 
 `
 const Display = styled.div`
@@ -84,11 +66,8 @@ const Display = styled.div`
   align-items: center;
 
   width: 100%;
-  height: 60vh;
 
   gap: 10%;
-
-  margin-top: 5%;
 
   padding-left: 5%;
 
@@ -106,6 +85,7 @@ const Call = styled(IoCallOutline)`
   &:hover{
     color: #c0c0c0a0;
   }
+
 `
 const Gmail = styled(CgMail)`
   font-size: 50px;
@@ -117,6 +97,7 @@ const Gmail = styled(CgMail)`
   &:hover{
     color: #c0c0c0a0;
   }
+  
 `
 const Twitter = styled(FaXTwitter)`
   font-size: 50px;
@@ -128,4 +109,5 @@ const Twitter = styled(FaXTwitter)`
   &:hover{
     color: #c0c0c0a0;
   }
+  
 `

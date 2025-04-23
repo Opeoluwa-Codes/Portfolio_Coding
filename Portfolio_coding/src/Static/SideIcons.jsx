@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
-import { Link, useLocation} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import useWindowSize from '../Hooks/UseWindowSize';
+
 import { IoMdHome } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 import { IoMdBriefcase } from "react-icons/io";
@@ -10,22 +12,142 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscTools } from "react-icons/vsc";
 
 const SideIcons = () => {
-
   const location = useLocation();
-  const {pathname} = location;
+
+  const { pathname } = location;
+
+  const { width } = useWindowSize();
+
+  const isMobile = width < 500;
+  
+  const [activeSection, setActiveSection] = useState('home');
+  
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+
+      const sections = ['home', 'about', 'resume', 'toolstack', 'portfolio', 'contact'];
+      
+      let maxVisibleSection = 'home';
+      let maxVisiblePercentage = 0;
+      
+      sections.forEach(section => {
+
+        const element = document.getElementById(section);
+
+        if (!element) return;
+        
+        const rect = element.getBoundingClientRect();
+
+        const total = rect.height;
+
+        const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+        
+        const visiblePercentage = Math.max(0, visibleHeight / total);
+        
+        if (visiblePercentage > maxVisiblePercentage) {
+          
+          maxVisiblePercentage = visiblePercentage;
+
+          maxVisibleSection = section;
+
+        }
+
+      }
+      );
+      
+      setActiveSection(maxVisibleSection);
+
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, [isMobile]);
+  
+  const isActive = (section) => {
+
+    if (isMobile) {
+      return section === activeSection;
+    } else {
+      return section === pathname.replace('/', '') || (section === 'home' && pathname === '/');
+    }
+
+  };
+
+  const handleMobileClick = (section) => {
+
+    if (!isMobile) return;
+    
+    const element = document.getElementById(section);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+  };
+
   return (
-    <SideIconWrapper>
-      <Links to='/'><Home active={pathname === "/"}/></Links>
+
+    <SideIconWrapper isMobile={isMobile}>
+
+      <Links 
+        to="/" 
+        onClick={() => handleMobileClick('home')}
+      >
+        <Home active={isActive('home')}/>
+      </Links>
+
       <ThreeVerticalDots/>
-      <Links to='/about'><About active={pathname === "/about"}/></Links>
+
+      <Links 
+        to="/about" 
+        onClick={() => handleMobileClick('about')}
+      >
+        <About active={isActive('about')}/>
+      </Links>
+
       <ThreeVerticalDots/>
-      <Links to='/resume'><Resume active={pathname === "/resume"}/></Links>
+
+      <Links 
+        to="/resume" 
+        onClick={() => handleMobileClick('resume')}
+      >
+        <Resume active={isActive('resume')}/>
+      </Links>
+
       <ThreeVerticalDots/>
-      <Links to='/toolstack'><ToolStack active={pathname === "/toolstack"}/></Links>
+
+      <Links 
+        to="/toolstack" 
+        onClick={() => handleMobileClick('toolstack')}
+      >
+        <ToolStack active={isActive('toolstack')}/>
+      </Links>
+
       <ThreeVerticalDots/>
-      <Links to='/portfolio'><Portfolio active={pathname === "/portfolio"}/></Links>
+
+      <Links 
+        to="/portfolio" 
+        onClick={() => handleMobileClick('portfolio')}
+      >
+        <Portfolio active={isActive('portfolio')}/>
+      </Links>
+
       <ThreeVerticalDots/>
-      <Links to='/contact'><Contact active={pathname === "/contact"}/></Links>
+
+      <Links 
+        to="/contact" 
+        onClick={() => handleMobileClick('contact')}
+      >
+        <Contact active={isActive('contact')}/>
+      </Links>
+      
     </SideIconWrapper>
   );
 };
@@ -38,7 +160,7 @@ const SideIconWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  position: absolute;
+  position: ${props => props.isMobile ? 'fixed' : 'absolute'};
   top: 50%;
   right: 2%;
   transform: translateY(-50%);
@@ -59,15 +181,14 @@ const SideIconWrapper = styled.div`
 
   @media (min-width: 915px) {
     display: none;
-
   }
 
   @media (max-width: 767px) {
     width: 25px;
     right: 1%;
-
   }
 `
+
 
 const Home = styled(IoMdHome)`
   font-size: 18px;

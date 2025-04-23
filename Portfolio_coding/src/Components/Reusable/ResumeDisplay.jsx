@@ -33,8 +33,6 @@ const ResumeDisplayWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  /* border: 1px red solid; */
-
   @media (max-width: 767px) {
     min-width: 32%;
 

@@ -1,42 +1,56 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import AboutPage from './Pages/AboutPage'
-import ContactPage from './Pages/ContactPage'
-import HomePage from './Pages/HomePage'
-import PortfolioPage from './Pages/PortfolioPage'
-import ResumePage from './Pages/ResumePage'
-import Layout from './Hooks/Layout'
-import SideIcons from './Static/SideIcons'
-import ToolStackPage from './Pages/ToolStackPage'
+import useWindowSize from './Hooks/UseWindowSize'
 
-// const SideIconsWrapper = () =>{
-//   const location = useLocation();
-//   return location.pathname === '/' ? <SideIcons/> : null; 
-// };
+import styled from 'styled-components'
+
+import AboutDesktop from './Desktop/AboutDesktop'
+import ContactDesktop from './Desktop/ContactDesktop'
+import HomeDesktop from './Desktop/HomeDesktop'
+import PortfolioDesktop from './Desktop/PortfolioDesktop'
+import ResumeDesktop from './Desktop/PortfolioDesktop'
+import ToolstackDesktop from './Desktop/ToolstackDesktop'
+
+import SideIcons from './Static/SideIcons'
+
+import Mobile from './Mobile/Mobile'
+
+import Layout from './Hooks/Layout'
+
+import { px } from 'framer-motion'
 
 const App = () => {
+
+  const { width } = useWindowSize();
+  const isMobile = width < 500;
+  
   return (
     <div>
-      <BrowserRouter>          
+      <BrowserRouter>   
 
-        <Routes>
+        {isMobile ?   
+                
+          <>
+            <Mobile />
+            <SideIcons />
+          </> 
 
-          <Route path='/' element={<HomePage/>}/>
-
-          <Route element={<Layout/>}>
-
-            <Route path='/about' element={<AboutPage/>}/>
-            <Route path='/resume' element={<ResumePage/>}/>
-            <Route path='/toolstack' element={<ToolStackPage/>}/>
-            <Route path='/portfolio' element={<PortfolioPage/>}/>
-            <Route path='/contact' element={<ContactPage/>}/>
-
-          </Route>
-
-        </Routes>
-
-        <SideIcons/>
-        {/* <SideIconsWrapper/> */}
+        :(
+            <>
+              <Routes>
+                <Route path='/' element={<HomeDesktop/>}/>
+                <Route element={<Layout/>}>
+                  <Route path='/about' element={<AboutDesktop/>}/>
+                  <Route path='/resume' element={<ResumeDesktop/>}/>
+                  <Route path='/toolstack' element={<ToolstackDesktop/>}/>
+                  <Route path='/portfolio' element={<PortfolioDesktop/>}/>
+                  <Route path='/contact' element={<ContactDesktop/>}/>
+                </Route>
+              </Routes>
+              <SideIcons/>
+            </>
+          )
+        }
 
       </BrowserRouter>
     </div>    
@@ -44,4 +58,5 @@ const App = () => {
 };
 
 export default App;
+
 

@@ -13,7 +13,7 @@ import Pf1 from '../Assets/PNG/pf1.png'
 
 import NextButton from '../Components/Reusable/NextButton';
 
-const portfolioItems = [
+const portfolioDesktop = [
   { id: 1, type: 'Portfolio', img: Pf1, alt: 'Portfolio_One', title: 'Freelancing Portfolio', description: 'This is a simple portfolio website a freelancer can use to display their resume and past works. This solution was created using ReactJS.', demolink: '', sourcelink: ''},
   { id: 2, type: 'E-commerce', img: Farm, alt: 'Farmera', title: 'Farmera', description: 'Farmera is a platform that connects farmers and buyers, enabling a seamless marketplace for agricultural goods. Our mission is to empower farmers and provide fresh, high-quality products to buyers efficiently. This solution was created using ReactJS.', demolink: 'https://farm-olive.vercel.app/', sourcelink: '' },
   // { id: 3, type: '', img: '/images/portfolio3.jpg', alt: '', title: '', description: '', demolink: '', sourcelink: '' },
@@ -28,7 +28,7 @@ const portfolioItems = [
   // { id: 12, type: '', img: '/images/portfolio12.jpg', alt: '', title: '', description: '', demolink: '', sourcelink: '' },
 ];
 
-const PortfolioPage = () => {
+const PortfolioDesktop = () => {
 
   const [filter, setFilter] = useState('All');
   const filterRef = useRef(null);
@@ -127,7 +127,7 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default PortfolioDesktop;
 
 const PortfolioWrapper = styled.div`
   
@@ -148,7 +148,6 @@ const PortfolioWrapper = styled.div`
 
   @media (max-width: 914px) {
     padding-left: 0%;
-      
   }
 
 `
@@ -189,10 +188,6 @@ const Filter = styled.div`
 
   scroll-behavior: smooth;  
 
-  scrollbar-color: white white;
-
-  /* border: 1px blue solid; */
-
   &::-webkit-scrollbar{
     display: none;
   }
@@ -202,13 +197,11 @@ const Filter = styled.div`
   }
 
   @media (max-width: 910px) {
-    
     width: 85%;
   }
 
   @media (max-width: 780px){
     gap: 5%;
-
   }
 
 `
@@ -238,9 +231,6 @@ const FilterButton = styled.div`
       transform: scale(1.05);
     }
 
-    /* @media (max-width: 990px){
-      font-size: 12px;
-    } */
 `
 
 const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
@@ -250,13 +240,13 @@ const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
 
   @media (min-width: 915px){
     display: none;
-
   }
 
   &:hover{
     color: #c0c0c0a0;
     transform: scale(1.2);
   }
+
 `
 
 const RightArrow = styled(MdKeyboardDoubleArrowRight)`
@@ -266,13 +256,13 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
 
   @media (min-width: 915px){
     display: none;
-
   }
 
   &:hover{
     color: #c0c0c0a0;
     transform: scale(1.2);
   }
+
 `
 
 
@@ -298,15 +288,6 @@ const PortfolioDisplay = styled.div`
   @media (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
     height: 70%;
-  }
-
-  @media (max-width: 500px) {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 10px;
-    padding-left: 6%;
-
-    margin-bottom: 18%;
-
   }
 
 `

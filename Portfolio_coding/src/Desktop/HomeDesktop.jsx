@@ -5,7 +5,7 @@ import Picture from '../Assets/JPG/Picture.jpeg'
 
 
 
-const HomePage = () => {
+const HomeDesktop = () => {
   const name = "OPEOLUWA"
   const action = "CODES"
   const [displayedName, setDisplayedName] = useState("");
@@ -85,7 +85,7 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomeDesktop;
 
 const HomeWrapper = styled.div`
 
@@ -100,6 +100,7 @@ const HomeWrapper = styled.div`
 
 `
 const LeftSide = styled.div`
+
   width: 70%;
   height: 100vh;
 
@@ -126,6 +127,7 @@ const LeftSide = styled.div`
   }
 
   p{
+
     font-size: 16px;
     
     font-weight: 200;
@@ -148,6 +150,7 @@ const LeftSide = styled.div`
   }
 
   button{
+
     width: fit-content;
 
     border: 1px white solid;
@@ -164,13 +167,10 @@ const LeftSide = styled.div`
 
     transition: all 1s ease-in-out;
 
-    /* @media (max-width: 705px) {
-      font-size: 14px;
-
-    } */
   }
 
   button:hover{
+    
     border-color: none;
     background-color: #cccccc;
     color: black;
@@ -178,6 +178,7 @@ const LeftSide = styled.div`
     cursor: pointer;
   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   }
 
   @media (max-width: 808px) {
@@ -249,19 +250,11 @@ const BusinessName = styled.div`
 
   letter-spacing: 5px;
 
-  /* @media (max-width: 785px) {
-    font-size: 12px;
-  }
-
-  @media (max-width: 705px) {
-    font-size: 10px;
-  } */
 `
 
 const NOne = styled.div`
     font-weight: 300;
     color: #cccccc;
-
 `
 
 const NTwo = styled.div`
@@ -273,7 +266,6 @@ const RightSide = styled.div`
   width: 30%;
   height: 100vh;
   background-color: black;
-
 
   position: relative;
 
@@ -309,6 +301,7 @@ const RightSide = styled.div`
     width: 0%;
     border-left: none;
   }
+
 `
 
 const RoleDisplay = styled.div`
@@ -344,13 +337,12 @@ const RoleDisplay = styled.div`
 
   @media (max-width: 705px) {
     font-size: 25px;
-
   }
 
   @media (max-width: 615px) {
     margin-bottom: 5px;
-
   }
+
 `
 
 
@@ -366,29 +358,27 @@ const SecondBox = styled.div`
   left: -10%;
   transform: translateY(-50%);
 
-
   img{
+
   width: inherit;
   height: inherit;
 
   transition: all 1.5s ease-in-out;
 
-
     &:hover{
       transform: scale(1.5);
     }
+
   }
 
   @media (max-width: 995px) {
     width: 200px;
     height: 250px;
-
   }
 
   @media (max-width: 894px) {
     width: 150px;
     height: 200px;
-
   }
 
   @media (max-width: 615px) {
@@ -397,7 +387,6 @@ const SecondBox = styled.div`
 
 `
 const Links = styled(Link)`
-  
   text-decoration: none
 `
 

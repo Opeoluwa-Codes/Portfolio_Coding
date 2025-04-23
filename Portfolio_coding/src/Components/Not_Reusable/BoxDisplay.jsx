@@ -61,7 +61,7 @@ const BoxWrapper = styled.div`
   }
 
   @media (max-width: 499px) {
-    width: 46%;
+    width: 100%;
     height: 45%;
 
   }
@@ -177,7 +177,7 @@ const InnerZ = styled.div`
 `
 
 const Stat = styled.div`
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 600;
   font-family: Montserrat;
 

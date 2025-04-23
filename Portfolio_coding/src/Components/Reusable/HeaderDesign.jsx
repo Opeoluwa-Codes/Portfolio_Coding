@@ -41,6 +41,13 @@ const HeaderDesignWrapper = styled.div`
 
   }
 
+  @media (max-width: 499px) {
+    width: 75%;
+
+    margin-bottom: 0px;
+
+  }
+
 
   
 
@@ -63,6 +70,14 @@ const HeaderDesignWrapper = styled.div`
 
     @media (max-width: 705px) {
     font-size: 35px;
+
+    }
+
+    @media (max-width: 500px) {
+    font-size: 30px;
+
+    box-sizing: border-box;
+    padding: 5px;
 
     }
   }

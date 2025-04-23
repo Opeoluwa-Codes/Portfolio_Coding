@@ -10,7 +10,7 @@ import Functional from "../Assets/PNG/Functional.png"
 
 import NextButton from '../Components/Reusable/NextButton';
 
-const AboutPage = () => {
+const AboutDesktop = () => {
   const description = "I am Opeoluwa..."
   const [displayedDescription, setDisplayedDescription] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,7 +58,7 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default AboutDesktop;
 
 const AboutWrapper = styled.div`
   height: 100vh;
@@ -79,9 +79,7 @@ const AboutWrapper = styled.div`
 
   @media (max-width: 914px) {
     padding-left: 0%;
-
   }
-
 
 `
 
@@ -99,29 +97,18 @@ const TandB = styled.div`
 
   @media (max-width: 914px) {
     width: 78%;
-
   }
 
   @media(max-width: 774px){
     height: 74vh;
-    
   }
 
   @media (max-width: 615px) {
     width: 80%;
-
   }
 
   @media (max-width: 534px) {
     height: 76vh;
-    
-  }
-
-  @media (max-width: 499px) {
-    height: 80%;
-    gap: 5%;
-
-    margin-bottom: 5%;
   }
 
 `
@@ -136,7 +123,6 @@ const TitleAndDescription = styled.div`
 
   box-sizing: border-box;
 
-
   h2{
     width: 100%;
     height: fit-content;
@@ -150,12 +136,10 @@ const TitleAndDescription = styled.div`
 
     @media (max-width: 615px) {
     text-align: center;
-
     }
 
     @media (max-width: 705px) {
     font-size: 18px;
-
     }
 
   }
@@ -178,10 +162,10 @@ const TitleAndDescription = styled.div`
 
     @media (max-width: 615px) {
     text-align: center;
-
     }
 
   }
+
 `
 
 
@@ -197,15 +181,9 @@ const BoxAndWhat = styled.div`
 
   box-sizing: border-box;
 
-
   @media(max-width: 774px){
     height: 68%;
   }
-
-  @media(max-width: 499px){
-    height: 55%;
-  }
-  
 
 `
 
@@ -221,10 +199,8 @@ const What = styled.div`
 
   box-sizing: border-box;
 
-
   @media (max-width: 914px) {
     width: 55%;
-
   }
 
   @media (max-width: 594px) {
@@ -233,19 +209,7 @@ const What = styled.div`
     width: 55%;
 
     align-items: center;
-
   }
-
-  @media (max-width: 499px) {
-    width: 55%;
-    height: 100%;
-
-    justify-content: start;
-
-    overflow-x: scroll;
-
-  }
-
 
   h3{
     font-size: 20px;
@@ -257,8 +221,8 @@ const What = styled.div`
 
     @media (max-width: 705px) {
     font-size: 18px;
-
     }
 
   }
+  
 `

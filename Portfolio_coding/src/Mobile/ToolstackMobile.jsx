@@ -9,9 +9,7 @@ import { SiTypescript } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 
-import NextButton from '../Components/Reusable/NextButton';
-
-const ToolStackPage = () => {
+const ToolstackMobile = () => {
   return (
     <ToolStackWrapper>
         <HeaderDesign title="MY TOOLSTACK" />
@@ -25,12 +23,11 @@ const ToolStackPage = () => {
             <IconWrapper delay="25s"><GitHub /></IconWrapper>
         </Tools>
 
-        <NextButton link="/portfolio"/>
     </ToolStackWrapper>
   );
 };
 
-export default ToolStackPage;
+export default ToolstackMobile;
 
 // Create two separate animations
 const orbitAnimationLarge = keyframes`
@@ -137,63 +134,45 @@ const ReactJS = styled(RiReactjsFill)`${iconStyle}`;
 const GitHub = styled(FaGithub)`${iconStyle}`;
 
 const ToolStackWrapper = styled.div`
-    height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 40vh;
 
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    padding-top: 3%;
-    padding-left: 12%;
+  box-sizing: border-box;
 
-    position: relative;
+  padding-left: 0%;
 
-    background-color: black;
+  background-color: black;
 
-    @media (max-width: 914px) {
-      padding-left: 0%;
-      align-items: center;
-    }
+  position: relative;
 
 `;
 
 const Tools = styled.div`
   width: 85%;
-  height: 400px;
+  height: 300px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  perspective: 1000px;
+  margin-top: 35%;
 
-  @media (max-width: 914px) {
-    perspective: 500px;
-    height: 300px;
-    margin-top: 10%;
-  }
+  perspective: 500px;
 
-  @media (max-width: 499px) {
-    margin-bottom: 55%;
-  }
+  margin-bottom: 55%;
+
 `;
 
 const IconWrapper = styled.div`
   position: absolute;
-  animation: ${orbitAnimationLarge} 30s linear infinite;
-  animation-delay: ${(props) => props.delay};
   transform-style: preserve-3d;
   opacity: 0;
 
-  @media (max-width: 914px) {
-    animation: ${orbitAnimationSmall} 30s linear infinite;
-    animation-delay: ${(props) => props.delay};
-  }
+  animation: ${orbitAnimationSmaller} 30s linear infinite;
+  animation-delay: ${(props) => props.delay};
 
-  @media (max-width: 499px) {
-    animation: ${orbitAnimationSmaller} 30s linear infinite;
-    animation-delay: ${(props) => props.delay};
-  }
 `;

@@ -53,6 +53,8 @@ const ContactWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
+
+
 `
 const ContactIcon = styled.div`
   width: 30%;
