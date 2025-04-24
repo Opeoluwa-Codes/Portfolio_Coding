@@ -18,12 +18,12 @@ const SideIcons = () => {
 
   const { width } = useWindowSize();
 
-  const isMobile = width < 500;
+  const ismobile = width < 500;
   
   const [activeSection, setActiveSection] = useState('home');
   
   useEffect(() => {
-    if (!isMobile) return;
+    if (!ismobile) return;
 
     const handleScroll = () => {
 
@@ -68,11 +68,11 @@ const SideIcons = () => {
       window.removeEventListener('scroll', handleScroll);
     };
 
-  }, [isMobile]);
+  }, [ismobile]);
   
   const isActive = (section) => {
 
-    if (isMobile) {
+    if (ismobile) {
       return section === activeSection;
     } else {
       return section === pathname.replace('/', '') || (section === 'home' && pathname === '/');
@@ -82,7 +82,7 @@ const SideIcons = () => {
 
   const handleMobileClick = (section) => {
 
-    if (!isMobile) return;
+    if (!ismobile) return;
     
     const element = document.getElementById(section);
 
@@ -94,7 +94,7 @@ const SideIcons = () => {
 
   return (
 
-    <SideIconWrapper isMobile={isMobile}>
+    <SideIconWrapper isMobile={ismobile}>
 
       <Links 
         to="/" 
@@ -160,7 +160,7 @@ const SideIconWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  position: ${props => props.isMobile ? 'fixed' : 'absolute'};
+  position: ${props => props.ismobile ? 'fixed' : 'absolute'};
   top: 50%;
   right: 2%;
   transform: translateY(-50%);

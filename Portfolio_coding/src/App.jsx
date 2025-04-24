@@ -8,7 +8,7 @@ import AboutDesktop from './Desktop/AboutDesktop'
 import ContactDesktop from './Desktop/ContactDesktop'
 import HomeDesktop from './Desktop/HomeDesktop'
 import PortfolioDesktop from './Desktop/PortfolioDesktop'
-import ResumeDesktop from './Desktop/PortfolioDesktop'
+import ResumeDesktop from './Desktop/ResumeDesktop'
 import ToolstackDesktop from './Desktop/ToolstackDesktop'
 
 import SideIcons from './Static/SideIcons'
@@ -22,13 +22,13 @@ import { px } from 'framer-motion'
 const App = () => {
 
   const { width } = useWindowSize();
-  const isMobile = width < 500;
+  const ismobile = width < 500;
   
   return (
     <div>
       <BrowserRouter>   
 
-        {isMobile ?   
+        {ismobile ?   
                 
           <>
             <Mobile />

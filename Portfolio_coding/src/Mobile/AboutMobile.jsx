@@ -102,7 +102,7 @@ const Cursor = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-  height: 100vh;
+  height: 90vh;
 
   display: flex;
   flex-direction: column;
@@ -192,8 +192,10 @@ const BoxAndWhat = styled.div`
   gap: 3%;
 
   width: 83%;
-  height: 55%;
+  height: 65%;
   box-sizing: border-box;
+
+  border: 1px red solid;
 
 `
 
