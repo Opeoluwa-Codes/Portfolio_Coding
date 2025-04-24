@@ -102,7 +102,7 @@ const Cursor = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-  height: 90vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -131,7 +131,7 @@ const TandB = styled.div`
   width: 89.5%;
   height: 90%;
 
-  gap: 5%;
+  gap: 1%;
 
   margin-top: 5%;
 
@@ -189,13 +189,12 @@ const BoxAndWhat = styled.div`
   justify-content: start;
   align-items: center;
 
-  gap: 3%;
+  gap: 5%;
 
   width: 83%;
   height: 65%;
-  box-sizing: border-box;
 
-  border: 1px red solid;
+  box-sizing: border-box;
 
 `
 
