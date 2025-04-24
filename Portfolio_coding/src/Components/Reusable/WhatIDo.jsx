@@ -43,6 +43,7 @@ const WhatIDoWrapper = styled.div`
 const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
+
 `
 const Title = styled.div`
   font-size: 16px;
@@ -54,11 +55,6 @@ const Title = styled.div`
     text-align: center;
 
     }
-
-  /* @media (max-width: 705px) {
-    font-size: 14px;
-
-  } */
 
 `
 const Description = styled.div`
@@ -81,4 +77,9 @@ const Description = styled.div`
     text-align: center;
 
     }
+
+  @media (max-width: 499px) {
+    width: 100%;
+
+  }
 `
