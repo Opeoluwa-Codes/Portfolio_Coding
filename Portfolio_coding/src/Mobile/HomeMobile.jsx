@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom';
 import {styled} from 'styled-components';
 import Picture from '../Assets/JPG/Picture.jpeg'
 
@@ -64,7 +63,7 @@ const HomeMobile = () => {
           <img src={Picture} alt="Opeoluwa" />
           <RoleDisplay>FrontEnd Developer</RoleDisplay>
           <p>My passion is developing scalable, efficient solutions using the latest web technologies. I'm eager to collaborate on exciting projects and seek mentorship connections. Let's create something amazing together!</p>
-          <Links to='/about'><button>MORE ABOUT ME</button></Links>
+          <StyledAnchor href='#about'><button>MORE ABOUT ME</button></StyledAnchor>
         </Others>
 
     </HomeWrapper>
@@ -207,9 +206,6 @@ const RoleDisplay = styled.div`
   
 `
 
-const Links = styled(Link)`
-
-  text-decoration: none
-  
+const StyledAnchor = styled.a`
+  text-decoration: none;
 `
-
