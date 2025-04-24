@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import keyframes from 'styled-components';
 import { useState, useEffect } from 'react';
 import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import BoxDisplay from '../Components/Not_Reusable/BoxDisplay';
@@ -11,26 +12,45 @@ import Functional from "../Assets/PNG/Functional.png"
 import NextButton from '../Components/Reusable/NextButton';
 
 const AboutDesktop = () => {
-  const description = "I am Opeoluwa..."
+  const description = "I am Opeoluwa...";
   const [displayedDescription, setDisplayedDescription] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isWaiting, setIsWaiting] = useState(false);
+  
+  useEffect(() => {
 
-  useEffect(() =>{
-
-    const interval = setInterval(() =>{
-
-      if (currentIndex < description.length){
-        setDisplayedDescription((prev) => prev + description[currentIndex]);
-        setCurrentIndex((prev) => prev + 1)
-      }else{
-        clearInterval(interval);
+    let timeout;
+    
+    if (isWaiting) {
+      timeout = setTimeout(() => {
+        setIsWaiting(false);
+        setIsDeleting(true);
+      }, 1500);
+    } else if (isTyping && !isDeleting) {
+      if (displayedDescription.length < description.length) {
+        timeout = setTimeout(() => {
+          setDisplayedDescription(description.substring(0, displayedDescription.length + 1));
+        }, 500);
+      } else {
+        setIsTyping(false);
+        setIsWaiting(true);
       }
-      
-    }, 100); 
+    } else if (isDeleting) {
+      if (displayedDescription.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedDescription(description.substring(0, displayedDescription.length - 1));
+        }, 100);
+      } else {
+        setIsDeleting(false);
+        setIsTyping(true);
+        timeout = setTimeout(() => {}, 500);
+      }
+    }
+    
+    return () => clearTimeout(timeout);
 
-    return () => clearInterval(interval);
-      
-    }, [currentIndex, description]);
+  }, [displayedDescription, isTyping, isDeleting, isWaiting]);
 
   return (
     <AboutWrapper>
@@ -38,7 +58,7 @@ const AboutDesktop = () => {
 
       <TandB>
         <TitleAndDescription>
-          <h2>{displayedDescription}</h2>
+          <h2>{displayedDescription}<Cursor>|</Cursor></h2>
           <p>I create engaging websites with ReactJS that work well on all devices. I build user-friendly interfaces with smooth interactions and secure login systems. I connect frontends to backends and use Git/GitHub for team projects. I'm seeking new opportunities and mentorship connections!</p>
         </TitleAndDescription>
         <BoxAndWhat>
@@ -59,6 +79,20 @@ const AboutDesktop = () => {
 };
 
 export default AboutDesktop;
+
+const pulseAnimation = keyframes`
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+`;
+
+const Cursor = styled.span`
+  animation: ${pulseAnimation} 1.5s ease-in-out infinite;
+  font-weight: bold;
+`;
 
 const AboutWrapper = styled.div`
   height: 100vh;

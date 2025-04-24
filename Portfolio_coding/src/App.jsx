@@ -22,13 +22,13 @@ import { px } from 'framer-motion'
 const App = () => {
 
   const { width } = useWindowSize();
-  const ismobile = width < 500;
+  const isMobile = width < 500;
   
   return (
     <div>
       <BrowserRouter>   
 
-        {ismobile ?   
+        {isMobile ?   
                 
           <>
             <Mobile />

@@ -26,8 +26,10 @@ const DialogueBox = (props) => {
                 <Close onClick={() => setIsOpen(false)}>
                     <CloseIcon/>
                 </Close>
-                <p className='p1'>{props.from}</p>
-                <p className='p2'>{props.to}</p>
+                <Dates>
+                  <p className='p1'>{props.from}</p>
+                  <p className='p2'>{props.to}</p>
+                </Dates>
                 <Description>
                     <ul>
                         <li>{props.one}</li>
@@ -104,43 +106,57 @@ const BoxWrapper = styled.div`
 
 const Description = styled.div`
 
-  margin-top: 20px;
-  color: white;
+  display: flex;
+  flex-direction: column;
 
-  font-size: 14px;
-  font-weight: 200;
+  align-items: center;
 
-  width: 89.5%;
+  height: fit-content;
 
   @media (max-width: 914px) {
     width: 78%;
 
   }
 
-  @media (max-width: 615px) {
-    text-align: left;
-  }
+`
 
+const Dates = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  height: fit-content;
+
+  padding-left: 10%;
+  box-sizing: border-box;
+
+  @media (max-width: 914px) {
+    align-items: center;
+    padding-left: 0%;
+    width: 78%;
+
+  }
 `
 
 const Box = styled(motion.div)`
 
-  position: absolute;
-  top: 0%;
-  left: 0%;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  
   background: black;
 
-  height: 100vh;
-  width: 100vw;
-
-  padding-left: 20.5%;
+  padding-left: 12.5%;
   padding-top: 2%;
   padding-bottom: 2%;
   
+  width: 100%;
+  height: 100vh;
+  
   box-sizing: border-box;
 
-
+  z-index: 1000;
 
   @media (max-width: 914px) {
     padding-top: 0%;
@@ -156,16 +172,7 @@ const Box = styled(motion.div)`
 
     font-family: Montserrat;
 
-    width: 89.5%;
-
-    @media (max-width: 914px) {
-        width: 78%;
-
-    }
-
-    @media (max-width: 615px) {
-      text-align: left;
-    }
+    width: fit-content;
 
   }
 
@@ -177,17 +184,7 @@ const Box = styled(motion.div)`
 
     font-family: Montserrat;
 
-    width: 89.5%;
-
-    margin-bottom: 2%;
-
-    @media (max-width: 914px) {
-        width: 78%;
-    }
-
-    @media (max-width: 615px) {
-      text-align: left;
-    }
+    width: fit-content;
 
   }
 

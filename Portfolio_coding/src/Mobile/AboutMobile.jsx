@@ -24,7 +24,7 @@ const AboutMobile = () => {
       timeout = setTimeout(() => {
         setIsWaiting(false);
         setIsDeleting(true);
-      }, 1500);
+      }, 2000);
     } else if (isTyping && !isDeleting) {
       if (displayedDescription.length < description.length) {
         timeout = setTimeout(() => {
@@ -38,11 +38,11 @@ const AboutMobile = () => {
       if (displayedDescription.length > 0) {
         timeout = setTimeout(() => {
           setDisplayedDescription(description.substring(0, displayedDescription.length - 1));
-        }, 300);
+        }, 100);
       } else {
         setIsDeleting(false);
         setIsTyping(true);
-        timeout = setTimeout(() => {}, 300);
+        timeout = setTimeout(() => {}, 500);
       }
     }
     
