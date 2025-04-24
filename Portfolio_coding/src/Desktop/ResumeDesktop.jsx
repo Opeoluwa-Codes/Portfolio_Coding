@@ -17,7 +17,7 @@ const ResumeDesktop = () => {
             <h2>EDUCATION</h2>
               <Education>
                 
-                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='View' here='resume' link='https://drive.google.com/file/d/1WfhTHdp3H-770eMhbkChK_qLLp6pHNez/view?usp=sharing'/>
+                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='View' here='resume' link='https://drive.google.com/file/d/1RycekKujzzUKN26AnLklm2HAVpTotNfs/view?usp=sharing'/>
 
               </Education>
           </One>
