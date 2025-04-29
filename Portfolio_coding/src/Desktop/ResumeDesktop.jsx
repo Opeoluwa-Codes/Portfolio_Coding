@@ -16,8 +16,10 @@ const ResumeDesktop = () => {
           <One>
             <h2>EDUCATION</h2>
               <Education>
+
+                <ResumeDisplay name='Canadore College' title='Project Management - IT' description='' view='View' here='resume' link='https://drive.google.com/file/d/1JvAT15rXI5gy1tcbwrHR65Kv39GisFHR/view?usp=drive_link'/>
                 
-                  <ResumeDisplay name='SAIL Innovation Lab' title='FrontEnd Engineering' description='A six-month program focused on FrontEnd Software Development.' view='View' here='resume' link='https://drive.google.com/file/d/1JvAT15rXI5gy1tcbwrHR65Kv39GisFHR/view?usp=drive_link'/>
+                <ResumeDisplay name='SAIL Innovation Lab' title='Software Development' description='' view='' here='' link=''/>
 
               </Education>
           </One>
@@ -27,8 +29,8 @@ const ResumeDesktop = () => {
               <Experience>
 
                 <Cover>
-                  <ResumeDisplay name='Farmera' title='FrontEnd Engineer' description='Farmera is an organization focused on connecting farmers and buyers.'/>
-                  <DialogueBox from='From: July 2024' to='To: December 2024' one='I worked in a team tasked with creating a simple solution for marketing farm produce. ' two='I worked on the sign-in page using ReactJS.' three='I developed an appealing sign-in page using HTML and CSS (Styled-Components).' four="I connected the sign-in frontend to the project's backend using Axios." five='I utilised AuthContext for easy access and management of authentication data.' six='I defined specific pages accessible by each category of users using Protected-Route.'/>
+                  <ResumeDisplay name='Farmera' title='FrontEnd Engineer' view='Farmera is an organization focused on connecting farmers and buyers.'/>
+                  <DialogueBox from='From: July 2024' to='To: December 2024' one='1. I worked in a team tasked with creating a simple solution for marketing farm produce. ' two='2. I worked on the sign-in page using ReactJS.' three='3. I developed an appealing sign-in page using HTML and CSS (Styled-Components).' four="4. I connected the sign-in frontend to the project's backend using Axios." five='5. I utilised AuthContext for easy access and management of authentication data.' six='6. I defined specific pages accessible by each category of users using Protected-Route.'/>
                 </Cover>
 
               </Experience>
@@ -106,7 +108,7 @@ const EduExp = styled.div`
     color: white;
 
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 
     @media (max-width: 705px) {
       font-size: 22px;
@@ -136,8 +138,6 @@ const Two = styled.div`
 
   padding-top: 10%;
   box-sizing: border-box;
-
-  border-top: 1px white solid;
 
   @media (min-width: 700px) {
     margin-top: 5%;
@@ -170,8 +170,6 @@ const Education = styled.div`
 
   scrollbar-width: thin;
 
-  margin-top: 2%;
-
   padding-bottom: 10px;
   box-sizing: border-box;
 
@@ -201,8 +199,6 @@ const Experience = styled.div`
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-
-  margin-top: 2%;
 
   padding-bottom: 10px;
   box-sizing: border-box;

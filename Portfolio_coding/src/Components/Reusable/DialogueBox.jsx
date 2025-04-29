@@ -31,14 +31,14 @@ const DialogueBox = (props) => {
                   <p className='p2'>{props.to}</p>
                 </Dates>
                 <Description>
-                    <ul>
-                        <li>{props.one}</li>
-                        <li>{props.two}</li>
-                        <li>{props.three}</li>
-                        <li>{props.four}</li>
-                        <li>{props.five}</li>
-                        <li>{props.six}</li>
-                    </ul>
+                  <Cover>
+                    <p>{props.one}</p>
+                    <p>{props.two}</p>
+                    <p>{props.three}</p>
+                    <p>{props.four}</p>
+                    <p>{props.five}</p>
+                    <p>{props.six}</p>
+                  </Cover>
                 </Description>
                 </Box>
                           )
@@ -110,31 +110,103 @@ const Description = styled.div`
   flex-direction: column;
 
   align-items: center;
+  justify-content: center;
 
   height: fit-content;
 
   @media (max-width: 914px) {
     width: 78%;
+  }
 
+  @media (max-width: 499px) {
+    width: 85%;
   }
 
 `
 
-const Dates = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+const Cover = styled.div`
 
+  width: 60%;
   height: fit-content;
 
-  padding-left: 10%;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+  justify-content: center;
+
+  @media (max-width: 914px) {
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (max-width: 499px) {
+    justify-content: center;
+    text-align: left;
+  }
+
+
+  p{
+      color: #cccccc;
+
+      font-size: 14px;
+      font-weight: 200;
+
+      margin-left: 5%;
+
+      @media (max-width: 914px) {
+        width: 78%;
+      }
+
+  }
+`
+
+const Dates = styled.div`
+
+  padding-left: 15%;
+
 
   @media (max-width: 914px) {
     align-items: center;
     padding-left: 0%;
     width: 78%;
+
+  }
+
+  @media (max-width: 499px) {
+    align-items: start;
+
+  }
+
+  .p1{
+    color: white;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    font-family: Montserrat;
+
+    width: fit-content;
+
+    @media (max-width: 499px){
+      font-size: 16px;
+    }
+
+  }
+
+  .p2{
+    color: white;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    font-family: Montserrat;
+
+    width: fit-content;
+
+    @media (max-width: 499px){
+      font-size: 16px;
+    }
 
   }
 `
@@ -161,51 +233,6 @@ const Box = styled(motion.div)`
   @media (max-width: 914px) {
     padding-top: 0%;
 
-  }
-
-
-  .p1{
-    color: white;
-
-    font-size: 20px;
-    font-weight: 400;
-
-    font-family: Montserrat;
-
-    width: fit-content;
-
-  }
-
-  .p2{
-    color: white;
-
-    font-size: 20px;
-    font-weight: 400;
-
-    font-family: Montserrat;
-
-    width: fit-content;
-
-  }
-
-  ul{
-
-    li{
-      color: #cccccc;
-
-      font-size: 14px;
-      font-weight: 200;
-
-      margin-bottom: 30px;
-      margin-left: 5%;
-
-      @media (max-width: 914px) {
-        width: 78%;
-        margin-bottom: 5%;
-
-      }
-
-    }
   }
 
 `

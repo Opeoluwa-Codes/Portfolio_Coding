@@ -10,9 +10,6 @@ const ResumeDisplay = (props) => {
       <SchoolorJobTitle>
         {props.title}
       </SchoolorJobTitle>
-      <Description>
-        {props.description}
-      </Description>
       <Certification>
         {props.view}       
         <a href={props.link} target={props.target} download={props.download}>{props.here}</a>
@@ -35,12 +32,10 @@ const ResumeDisplayWrapper = styled.div`
 
   @media (max-width: 767px) {
     min-width: 32%;
-
   }
 
   @media (max-width: 499px) {
     min-width: 48.5%;
-
   }
 
 `
@@ -56,16 +51,19 @@ const SchoolorJob = styled.div`
 
   display: flex;
   justify-content: start;
-  align-items: start;
+  align-items: end;
 
   @media (max-width: 705px) {
     font-size: 14px;
-
   }
 
   @media (max-width: 615px) {
     justify-content: center;
+  }
 
+  @media (max-width: 499px) {
+    height: 20px;
+    align-items: start;
   }
 
 `
@@ -77,7 +75,8 @@ const SchoolorJobTitle = styled.div`
 
   font-family: Montserrat;
 
-  height: 40px;
+  height: 55px;
+  margin-bottom: 5px;
 
   display: flex;
   justify-content: start;
@@ -85,30 +84,16 @@ const SchoolorJobTitle = styled.div`
 
   @media (max-width: 705px) {
     font-size: 16px;
-
   }
 
   @media (max-width: 615px) {
     justify-content: center;
-
   }
 
-
-`
-const Description = styled.div`
-
-  font-size: 14px;
-  font-weight: 200;
-  color: #cccccc;
-
-  font-family: Arial;
-
-  margin-top: 5px;
-  margin-bottom: 10px;
-
-
-  @media (max-width: 632px) {
-    font-weight: 100;
+  @media (max-width: 499px) {
+    justify-content: center;
+    align-items: start;
+    height: fit-content;
   }
 
 `
@@ -125,16 +110,14 @@ const Certification = styled.div`
 
   gap: 5px;
 
-
-  /* @media (max-width: 705px) {
-    font-size: 12px;
-
-  } */
+  margin-bottom: 10px;
 
   @media (max-width: 615px) {
-
     justify-content: center;
+  }
 
+  @media (max-width: 499px) {
+    height: 35px;
   }
 
 
@@ -151,11 +134,6 @@ const Certification = styled.div`
     &:hover{
       transform: scale(1.05);
     }
-
-    /* @media (max-width: 705px) {
-      font-size: 12px;
-
-    } */
 
     @media (max-width: 615px) {
 
