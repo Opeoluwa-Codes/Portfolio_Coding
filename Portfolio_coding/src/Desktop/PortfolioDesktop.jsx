@@ -162,10 +162,8 @@ const Buttons = styled.div`
 
   margin-bottom: 3%;
 
-  @media (max-width: 914px) {
-    width: 78%;
-    
-    justify-content: space-between;
+  @media (max-width: 915px) {
+    width: 86.5%;
   }
 
 `
@@ -177,7 +175,7 @@ const Filter = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   gap: 2%;
 
@@ -186,21 +184,14 @@ const Filter = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar{
     display: none;
   }
 
-  @media (max-width: 918px){
+  @media (max-width: 820px){
     justify-content: start;
-  }
-
-  @media (max-width: 910px) {
-    width: 85%;
-  }
-
-  @media (max-width: 780px){
     gap: 5%;
   }
 
@@ -238,7 +229,7 @@ const LeftArrow = styled(MdKeyboardDoubleArrowLeft)`
 
   color: white;
 
-  @media (min-width: 915px){
+  @media (min-width: 820px){
     display: none;
   }
 
@@ -254,7 +245,7 @@ const RightArrow = styled(MdKeyboardDoubleArrowRight)`
 
   color: white;
 
-  @media (min-width: 915px){
+  @media (min-width: 820px){
     display: none;
   }
 
