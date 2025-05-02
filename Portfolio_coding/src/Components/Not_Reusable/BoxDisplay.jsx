@@ -7,13 +7,13 @@ const BoxDisplay = () => {
       <LeftBox>
         <TopLeftBox>
           <InnerX>
-            <Stat>1+</Stat>
+            <Stat>3+</Stat>
             <Label>Years of Experience</Label>
           </InnerX>
         </TopLeftBox>
         <BottomLeftBox>
           <InnerY1>
-            <Stat>100%</Stat>
+            <Stat>99.9%</Stat>
             <Label>Task Completion</Label>
           </InnerY1>
         </BottomLeftBox>
@@ -22,13 +22,13 @@ const BoxDisplay = () => {
       <RightBox>
         <TopRightBox>
           <InnerY2>
-            <Stat>1</Stat>
-            <Label>Projects Completed</Label>
+            <Stat>500+</Stat>
+            <Label>Articles Completed</Label>
           </InnerY2>
         </TopRightBox>
         <BottomRightBox>
           <InnerZ>
-            <Stat>1</Stat>
+            <Stat>20+</Stat>
             <Label>Clients Satisfied</Label>
           </InnerZ>
         </BottomRightBox>
@@ -62,7 +62,7 @@ const BoxWrapper = styled.div`
 
   @media (max-width: 499px) {
     width: 100%;
-    height: 65%;
+    height: 150px;
 
   }
 

@@ -62,22 +62,22 @@ const AboutMobile = () => {
           <h2>{displayedDescription}<Cursor>|</Cursor></h2>
           <p>I create engaging websites with ReactJS that work well on all devices. I build user-friendly interfaces with smooth interactions and secure login systems. I connect frontends to backends and use Git/GitHub for team projects. I'm seeking new opportunities and mentorship connections!</p>
 
+          <BoxContainer>
+
+            <BoxDisplay/>
+
+          </BoxContainer>
+
         </TitleAndDescription>
 
-        <BoxAndWhat>
+        <What>
 
-          <BoxDisplay/>
-
-          <What>
-
-            <h3>What I Do!</h3>
-            <WhatIDo image={Interactive} title="Interactive UI" description="Crafting dynamic and user-friendly interfaces and ensuring seamless interactivity."/>
-            <WhatIDo image={Responsive} title="Responsive UI" description="Designing adaptable and visually appealing layouts and guaranteeing optimal performance."/>
-            <WhatIDo image={Functional} title="Functional Websites" description="Building robust web solutions and managing authentication efficiently."/>
+          <h3>What I Do!</h3>
+          <WhatIDo image={Interactive} title="Interactive UI" description="Crafting dynamic and user-friendly interfaces and ensuring seamless interactivity."/>
+          <WhatIDo image={Responsive} title="Responsive UI" description="Designing adaptable and visually appealing layouts and guaranteeing optimal performance."/>
+          <WhatIDo image={Functional} title="Functional Websites" description="Building robust web solutions and managing authentication efficiently."/>
             
-          </What>
-
-        </BoxAndWhat>
+        </What>
         
       </TandB>
 
@@ -102,122 +102,106 @@ const Cursor = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-  height: 100vh;
+  background: black;
+
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
 
-  box-sizing: border-box;
-
-  padding-left: 0%;
-  padding-bottom: 20px;
-
-  background-color: black;
-
-  border: none;
-
-  position: relative;
+  height: fit-content;
 
 `
 
 const TandB = styled.div`
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
 
-  width: 89.5%;
-  height: 90%;
+  height: fit-content;
+  width: 78%;
 
-  gap: 1%;
-
-  margin-top: 5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
 `
 
 const TitleAndDescription = styled.div`
-  height: 30%;
-  width: 83%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: space-between;
+  align-items: center;
 
-  box-sizing: border-box;
+  height: 365px;
+
+  margin-bottom: 10px;
 
   h2{
-    width: 100%;
-    height: 25px;
-
-    font-size: 18px;
-    font-weight: 600;
     color: white;
 
-    margin-bottom: 5%;
-    margin-top: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 
-    text-align: center;
-
-
+    font-size: 22px;
 
   }
 
-  p{
-    width: 100%;
-    height: fit-content;
-
-    font-size: 14px;
-    font-weight: 200;
-    color: #cccccc;
-
+  P{
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
     text-align: center;
 
-    line-height: 23px;
+    line-height: 25px;
 
-    margin-top: 0px;
-    margin-bottom: 0px;
+    font-size: 14px;
 
   }
 
 `
 
-const BoxAndWhat = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-
-  gap: 5%;
-
-  width: 83%;
-  height: 65%;
-
-  box-sizing: border-box;
+const BoxContainer = styled.div`
+  width: 100%;
+  height: fit-content;
 
 `
 
 const What = styled.div`
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
 
-  box-sizing: border-box;
-
-  width: 100%;
-  height: 100%;
-
-  gap: 10px;
+  height: 310px;
 
   h3{
-    font-size: 20px;
-    font-weight: 700;
     color: white;
-    
-    margin-top: 0px;
-    margin-bottom: 5px;
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-size: 20px;
 
   }
 

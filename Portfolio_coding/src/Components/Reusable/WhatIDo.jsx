@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const WhatIDo = (props) => {
   return (
     <WhatIDoWrapper>
-      <img src={props.image} alt="" />
+      <Icons>{props.icons}</Icons>
 
       <InfoWrapper>
         <Title>{props.title}</Title>
@@ -30,14 +30,16 @@ const WhatIDoWrapper = styled.div`
 
   }
 
-  img{
-    width: 40px;
+`
 
-    @media (max-width: 594px) {
-      display: none;
+const Icons = styled.div`
+  width: 40px;
 
-    }
+  @media (max-width: 594px) {
+    display: none;
+
   }
+  
 `
 
 const InfoWrapper = styled.div`
@@ -64,7 +66,7 @@ const Description = styled.div`
 
   color: #cccccc;
 
-  line-height: 20px;
+  line-height: 25px;
 
   text-align: left;
 
