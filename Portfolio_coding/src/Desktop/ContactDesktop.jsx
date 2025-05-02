@@ -7,8 +7,6 @@ import { CgMail } from "react-icons/cg";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
 
-import NextButton from '../Components/Reusable/NextButton';
-
 const ContactDesktop = () => {
   return (
     <ContactWrapper>
@@ -20,7 +18,6 @@ const ContactDesktop = () => {
           <ContactTile icon={<Gmail/>} info="opeoluwa.codes@gmail.com" type="email"/>
         </Display>
       </MainSection>
-      <NextButton link="/"/>
     </ContactWrapper>
   );
 };

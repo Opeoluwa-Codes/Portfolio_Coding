@@ -4,8 +4,6 @@ import HeaderDesign from '../Components/Reusable/HeaderDesign';
 import ResumeDisplay from '../Components/Reusable/ResumeDisplay'
 import DialogueBox from '../Components/Reusable/DialogueBox';
 
-import NextButton from '../Components/Reusable/NextButton';
-
 const ResumeDesktop = () => {
   return (
     <ResumeWrapper>
@@ -37,8 +35,6 @@ const ResumeDesktop = () => {
           </Two>
 
         </EduExp>
-
-        <NextButton link="/toolstack"/>
         
     </ResumeWrapper>
   );

@@ -9,8 +9,6 @@ import Interactive from "../Assets/PNG/Interactive.png"
 import Responsive from "../Assets/PNG/Responsive.png"
 import Functional from "../Assets/PNG/Functional.png"
 
-import NextButton from '../Components/Reusable/NextButton';
-
 const AboutDesktop = () => {
   const description = "I am Opeoluwa...";
   const [displayedDescription, setDisplayedDescription] = useState("");
@@ -71,8 +69,6 @@ const AboutDesktop = () => {
           </What>
         </BoxAndWhat>
       </TandB>
-
-      <NextButton link="/resume"/>
 
     </AboutWrapper>
   );

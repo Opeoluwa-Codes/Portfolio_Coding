@@ -11,11 +11,9 @@ import PortfolioItem from "../Components/Reusable/PortfolioItem"
 import Farm from '../Assets/PNG/farmera.png'
 import Pf1 from '../Assets/PNG/pf1.png'
 
-import NextButton from '../Components/Reusable/NextButton';
-
 const portfolioItems = [
-  { id: 1, type: 'Portfolio', img: Pf1, alt: 'Portfolio_One', title: 'Freelancing Portfolio', description: 'This is a simple portfolio website a freelancer can use to display their resume and past works. This solution was created using ReactJS.', demolink: '', sourcelink: ''},
-  { id: 2, type: 'E-commerce', img: Farm, alt: 'Farmera', title: 'Farmera', description: 'Farmera is a platform that connects farmers and buyers, enabling a seamless marketplace for agricultural goods. Our mission is to empower farmers and provide fresh, high-quality products to buyers efficiently. This solution was created using ReactJS.', demolink: 'https://farm-olive.vercel.app/', sourcelink: '' },
+  { id: 1, type: 'Portfolio', img: Pf1, alt: 'Portfolio_One', title: 'Freelancing Portfolio', description: 'This is a simple portfolio website a freelancer can use to display their resume and past works. This solution was created using ReactJS.', demolink: 'https://my-portfolio-navy-one-66.vercel.app/', sourcelink: 'https://github.com/Opeoluwa-Codes/Portfolio_Coding.git'},
+  { id: 2, type: 'E-commerce', img: Farm, alt: 'Farmera', title: 'Farmera', description: 'Farmera is a platform that connects farmers and buyers, enabling a seamless marketplace for agricultural goods. Our mission is to empower farmers and provide fresh, high-quality products to buyers efficiently. This solution was created using ReactJS.', demolink: 'https://farm-olive.vercel.app/', sourcelink: 'https://github.com/Faarmera/Farmera-Frontend.git' },
   // { id: 3, type: '', img: '/images/portfolio3.jpg', alt: '', title: '', description: '', demolink: '', sourcelink: '' },
   // { id: 4, type: '', img: '/images/portfolio4.jpg', alt: '', title: '', description: '', demolink: '', sourcelink: '' },
   // { id: 5, type: '', img: '/images/portfolio5.jpg', alt: '', title: '', description: '', demolink: '', sourcelink: '' },
@@ -119,8 +117,6 @@ const PortfolioDesktop = () => {
         
   
       </PortfolioDisplay>
-
-      <NextButton link="/contact"/>
 
     </PortfolioWrapper>
 

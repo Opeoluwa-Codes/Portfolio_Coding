@@ -9,8 +9,6 @@ import { SiTypescript } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 
-import NextButton from '../Components/Reusable/NextButton';
-
 const ToolstackDesktop = () => {
   return (
     <ToolStackWrapper>
@@ -24,8 +22,7 @@ const ToolstackDesktop = () => {
             <IconWrapper delay="20s"><TypeScript /></IconWrapper>
             <IconWrapper delay="25s"><GitHub /></IconWrapper>
         </Tools>
-
-        <NextButton link="/portfolio"/>
+        
     </ToolStackWrapper>
   );
 };

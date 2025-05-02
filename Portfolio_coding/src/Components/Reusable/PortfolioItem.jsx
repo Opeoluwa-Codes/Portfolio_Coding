@@ -16,7 +16,7 @@ const PortfolioItem = (props) => {
         <img src={props.img} alt={props.alt}/>
 
         <Button>
-          <button onClick={(e)=>{e.preventDefault(); setClickOpen(true)}}>Read More</button>
+          <button onClick={(e)=>{e.preventDefault(); setClickOpen(true)}}>View</button>
         </Button>
 
         <AnimatePresence>
@@ -37,7 +37,7 @@ const PortfolioItem = (props) => {
                 <h2>{props.title}</h2>
                 <p>{props.description}</p>
 
-                <a href={props.demolink} target='blank' className='a1'>View</a>
+                <a href={props.demolink} target='blank' className='a1'>View Website</a>
                 <a href={props.sourcelink} className='a2'>Source Code</a>
               </Information>
 
@@ -98,7 +98,7 @@ const Wrapper = styled.div`
   }
 
   &:hover img {
-    opacity: 0.08;
+    opacity: 0.15;
   }
 
 `
@@ -246,7 +246,7 @@ const Information = styled.div`
   align-items: center;
 
   height: 50vh;
-
+  
   @media (max-width: 914px) {
     width: 78%;
 
@@ -275,7 +275,7 @@ const Information = styled.div`
 
     color: #cccccc;
 
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 
     width: 70%;
 
@@ -286,7 +286,7 @@ const Information = styled.div`
 
     padding: 10px;
 
-    margin-bottom: 6%;
+    margin-bottom: 1%;
 
     text-decoration: none;
 
