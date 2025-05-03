@@ -28,7 +28,7 @@ const ResumeDesktop = () => {
 
                 <Cover>
                   <ResumeDisplay name='Farmera' title='FrontEnd Engineer' view='Farmera is an organization focused on connecting farmers and buyers.'/>
-                  <DialogueBox from='From: July 2024' to='To: December 2024' one='1. I worked in a team tasked with creating a simple solution for marketing farm produce. ' two='2. I worked on the sign-in page using ReactJS.' three='3. I developed an appealing sign-in page using HTML and CSS (Styled-Components).' four="4. I connected the sign-in frontend to the project's backend using Axios." five='5. I utilised AuthContext for easy access and management of authentication data.' six='6. I defined specific pages accessible by each category of users using Protected-Route.'/>
+                  <DialogueBox from='From: November 2024' to='To: Present' one='1. I worked in a team tasked with creating a simple solution for marketing farm produce. ' two='2. I worked on the sign-in page using ReactJS.' three='3. I developed an appealing sign-in page using HTML and CSS (Styled-Components).' four="4. I connected the sign-in frontend to the project's backend using Axios." five='5. I utilised AuthContext for easy access and management of authentication data.' six='6. I defined specific pages accessible by each category of users using Protected-Route.'/>
                 </Cover>
 
               </Experience>
